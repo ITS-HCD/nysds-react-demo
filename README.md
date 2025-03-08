@@ -1,5 +1,10 @@
 # React Demo to showcase NYSDS usage
-Get started with NYSDS by following the instructions here: https://designsystem.ny.gov/getting-started/developers/
+This React Demo demonstrates a basic developer usage of the NYSDS components. 
+
+You can follow the thought process of someone creating a new React project by following the steps below.
+
+## Getting Started
+First let's create a new React project. You can use the NYSDS reference site to install its packages(https://designsystem.ny.gov/getting-started/developers/), but in React's case, we can follow the terminal instructions below.
 
 Terminal Instructions:
 ```
@@ -7,7 +12,11 @@ npm create vite@latest projectName -- --template react-ts
 npm install @nysds/components @nysds/styles
 ```
 
-## Setting up npm link
+## Using components
+You can find examples of how developers can make use of specific components in the App.tsx of this project. We wrap the NYSDS components with lit/react.
+> As of 3/8/2025, this project uses "@lit/react" (v1.0.7) https://lit.dev/docs/frameworks/react/
+
+## Setting up npm link (For NYSDS contributers/developers)
 If you’re actively developing NYSDS Web Components (@nysds/components) and want to test changes before publishing, follow these steps:
 
 1. Link Your Local NYSDS Repo
@@ -28,14 +37,5 @@ After linking, restart the Next.js development server:
 
 Now, any changes made to NYSDS Web Components will reflect immediately in this React app.
 
-## Issue Log (note to self):
-
-- First -> Had to add "lit-labs" as a dependency in package.json
-- Depreciation Issue -> Maybe use "@lit/react" (v1.0.7) instead of "@lit-labs/react" (version 2.1.3)
-https://lit.dev/docs/frameworks/react/
-- Form Issue -> submission not going through? (WORKING IN PROGRESS)
-... attempting `npm link` & `npm link @nysds/components`
-
-
-Source:
+### Source of reference for this project:
 https://github.com/ITS-HCD/nysds-react-webcomponents-demo

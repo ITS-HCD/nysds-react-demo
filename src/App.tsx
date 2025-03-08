@@ -98,7 +98,15 @@ function App() {
   return (
     <>
       <h1>Vite + React + NYSDS</h1>
-      {/* Use the custom element directly */}
+      <Alert 
+        type="info"
+        heading="NYSDS Components"
+        text="We make use of form-related NYSDS components in the native HTML form below."
+        primaryLabel="Learn more on NYSDS reference site"
+        primaryAction="https://designsystem.ny.gov/"
+        dismissible
+      />
+
       <form
         className="nys-newsletter-form"
         method="POST"
@@ -115,14 +123,6 @@ function App() {
           <Option value="transportation_news" label="Transportation & Infrastructure" />
           <Option value="environment" label="Environment & Sustainability" />      
         </Select>
-
-        {/* <nys-select name="example" label="Select your favorite borough" id="borough">
-          <nys-option value="bronx" label="The Bronx"></nys-option>
-          <nys-option value="brooklyn" label="Brooklyn"></nys-option>
-          <nys-option value="manhattan" label="Manhattan"></nys-option>
-          <nys-option value="staten_island" label="Staten Island"></nys-option>
-          <nys-option value="queens" label="Queens"></nys-option>      
-        </nys-select> */}
 
         <RadioGroup 
           name="frequency"
