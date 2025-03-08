@@ -1,10 +1,10 @@
 # React Demo to showcase NYSDS usage
 This React Demo demonstrates a basic developer usage of the NYSDS components. 
 
-You can follow the thought process of someone creating a new React project by following the steps below.
+Following the steps below, you can see how someone starting with a new React project will make use of the NYSDS components.
 
 ## Getting Started
-First let's create a new React project. You can use the NYSDS reference site to install its packages(https://designsystem.ny.gov/getting-started/developers/), but in React's case, we can follow the terminal instructions below.
+First, let's create a new React project. You can use the NYSDS reference site to install its packages (https://designsystem.ny.gov/getting-started/developers/), but in React's case, we can follow the terminal instructions below.
 
 Terminal Instructions:
 ```
@@ -14,7 +14,7 @@ npm install @nysds/components @nysds/styles
 
 ## Using components
 You can find examples of how developers can make use of specific components in the App.tsx of this project. We wrap the NYSDS components with lit/react.
-> As of 3/8/2025, this project uses "@lit/react" (v1.0.7) https://lit.dev/docs/frameworks/react/
+> As of 3/8/2025, this project uses [@lit/react](https://lit.dev/docs/frameworks/react/) (v1.0.7)
 
 ## Setting up npm link (For NYSDS contributers/developers)
 If you’re actively developing NYSDS Web Components (@nysds/components) and want to test changes before publishing, follow these steps:
