@@ -11,6 +11,7 @@ import {
   NysRadiobutton,
   NysRadiogroup,
   NysSelect,
+  NysOption,
   NysAlert,
   NysButton,
 } from "@nysds/components";
@@ -60,6 +61,12 @@ export const Select = createComponent({
   elementClass: NysSelect,
 });
 
+export const Option = createComponent({
+  react: React,
+  tagName: "nys-option",
+  elementClass: NysOption,
+});
+
 export const Alert = createComponent({
   react: React,
   tagName: "nys-alert",
@@ -98,7 +105,25 @@ function App() {
         onSubmit={handleSubmit}
       >
         <TextInput name='fullName' label="Full name" />
-        <TextInput name='email' label="Email" type="email" />
+        
+        <Textarea name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." />
+        
+        <Select name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic">
+          <Option value="government_updates" label="Government Updates" />
+          <Option value="community_events" label="Community Events" />
+          <Option value="public_services" label="Public Services & Resources" />
+          <Option value="transportation_news" label="Transportation & Infrastructure" />
+          <Option value="environment" label="Environment & Sustainability" />      
+        </Select>
+
+        {/* <nys-select name="example" label="Select your favorite borough" id="borough">
+          <nys-option value="bronx" label="The Bronx"></nys-option>
+          <nys-option value="brooklyn" label="Brooklyn"></nys-option>
+          <nys-option value="manhattan" label="Manhattan"></nys-option>
+          <nys-option value="staten_island" label="Staten Island"></nys-option>
+          <nys-option value="queens" label="Queens"></nys-option>      
+        </nys-select> */}
+
         <RadioGroup 
           name="frequency"
           label="How often do you want updates?"
