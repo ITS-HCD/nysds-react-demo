@@ -121,7 +121,6 @@ function App() {
           id="subscribe-checkbox-disabled-checked"
           name="subscribe"
           value="email-updates"
-          
         />
 
         <Checkboxgroup
@@ -129,10 +128,10 @@ function App() {
           description="Choose from the options below"
         >
           <Checkbox label="Adirondacks" name="landmarks[]" value="adirondacks" />
-          <Checkbox name="landmarks[]" value="finger-lakes" label="Finger Lakes" />
-          <Checkbox name="landmarks[]" value="catskills" label="Catskills" />
-          <Checkbox name="landmarks[]" value="niagara-falls" label="Niagara Falls"/>
-          <Checkbox name="landmarks[]" value="coney-island" label="Coney Island"/>
+          <Checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" />
+          <Checkbox name="landmarks" value="catskills" label="Catskills" />
+          <Checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"/>
+          <Checkbox name="landmarks" value="coney-island" label="Coney Island"/>
         </Checkboxgroup>
 
         <Button
