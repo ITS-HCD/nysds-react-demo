@@ -5,6 +5,8 @@ Following the steps below, you can see how someone starting with a new React pro
 ## Getting Started
 First, let's create a new React project. You can use the [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) to install its packages, but in React's case, we can follow the terminal instructions below.
 
+ℹ️ Missing any dependencies? See the `package.json` file of this project
+
 > Terminal Instructions:
 ```
 npm create vite@latest projectName -- --template react-ts
@@ -13,11 +15,11 @@ npm install
 npm install @nysds/components @nysds/styles
 ```
 
-ℹ️ If you're missing any dependencies, see the `package.json` file of this project
-
 ## Start the Development Server
 To start the local server, run:
-`npm run dev`
+```
+npm run dev
+```
 
 ## Using NYSDS components
 You can find examples of how developers can make use of specific components in the App.tsx of this project. \
