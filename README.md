@@ -9,7 +9,10 @@ First, let's create a new React project. You can use the [NYSDS reference site](
 Terminal Instructions:
 ```
 npm create vite@latest projectName -- --template react-ts
+cd projectName
+npm install
 npm install @nysds/components @nysds/styles
+npm run dev
 ```
 
 ## Using components
