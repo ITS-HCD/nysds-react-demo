@@ -12,8 +12,13 @@ npm create vite@latest projectName -- --template react-ts
 cd projectName
 npm install
 npm install @nysds/components @nysds/styles
-npm run dev
 ```
+
+If you're missing any dependencies, see this package.json file
+
+## Start the Development Server
+To start the local server, run:
+`npm run dev`
 
 ## Using components
 You can find examples of how developers can make use of specific components in the App.tsx of this project. We wrap the NYSDS components with lit/react.
