@@ -1,7 +1,7 @@
-import { FormEvent } from 'react';
+import React, { FormEvent, useState } from 'react';
 import './App.css';
 import { createComponent } from "@lit/react";
-import React from "react";
+
 // Import the components so that the custom elements are registered
 import {
   NysTextinput,
@@ -81,6 +81,9 @@ export const Button = createComponent({
 
 
 function App() {
+  // State to store submitted form data
+  const [submittedData, setSubmittedData] = useState<Record<string, FormDataEntryValue> | null>(null);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Assert that the target is an HTMLFormElement
@@ -93,6 +96,7 @@ function App() {
     });
 
     alert('Form Data:\n' + JSON.stringify(data, null, 2));
+    setSubmittedData(data);
   };
 
   return (
@@ -165,6 +169,15 @@ function App() {
           label="Subscribe"
         />
       </form>
+      <br></br>
+      {submittedData && (
+        <Alert
+          type="success"
+          heading="Form submitted successfully"
+          text={`${submittedData ? "\n\nSubmitted Data:\n" + JSON.stringify(submittedData, null, 2) : ""}`}
+          dismissible
+        />
+      )}
     </>
   );
 }
