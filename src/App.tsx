@@ -112,15 +112,16 @@ function App() {
       />
 
       <form
+        id="myForm"
         className="nys-newsletter-form"
         method="POST"
         onSubmit={handleSubmit}
       >
-        <TextInput name='fullName' label="Full name" />
+        <TextInput name='fullName' label="Full name" required/>
+        <TextInput name='email' label="Email" type="email" required/>
+        <Textarea name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
         
-        <Textarea name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." />
-        
-        <Select name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic">
+        <Select name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
           <Option value="government_updates" label="Government Updates" />
           <Option value="community_events" label="Community Events" />
           <Option value="public_services" label="Public Services & Resources" />
@@ -128,17 +129,19 @@ function App() {
           <Option value="environment" label="Environment & Sustainability" />      
         </Select>
 
-        <RadioGroup 
-          name="frequency"
+        <RadioGroup
           label="How often do you want updates?"
           description="These updates will be sent directly to your email."
           size="md"
+          required
         >
           <Radiobutton
+            name="frequency"
             label="Weekly"
             value="weekly"
           />
           <Radiobutton
+            name="frequency"
             label="Monthly"
             value="monthly"
           />
