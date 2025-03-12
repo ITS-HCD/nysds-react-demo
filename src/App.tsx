@@ -14,6 +14,7 @@ import {
   NysOption,
   NysAlert,
   NysButton,
+  NysToggle,
 } from "@nysds/components";
 
 /***** Further instruction on why we do this can be found on: https://lit.dev/docs/frameworks/react/ *****/
@@ -77,6 +78,11 @@ export const Button = createComponent({
   react: React,
   tagName: "nys-button",
   elementClass: NysButton,
+});
+export const Toggle = createComponent({
+  react: React,
+  tagName: "nys-toggle",
+  elementClass: NysToggle,
 });
 
 
@@ -153,19 +159,24 @@ function App() {
           id="subscribe-checkbox-disabled-checked"
           name="subscribe"
           value="email-updates"
+          required
         />
 
         <Checkboxgroup
           label="Select your favorite New York landmarks"
           description="Choose from the options below"
+          required
         >
-          <Checkbox label="Adirondacks" name="landmarks[]" value="adirondacks" />
+          <Checkbox name="landmarks" label="Adirondacks" value="adirondacks" />
           <Checkbox name="landmarks" value="finger-lakes" label="Finger Lakes" />
           <Checkbox name="landmarks" value="catskills" label="Catskills" />
           <Checkbox name="landmarks" value="niagara-falls" label="Niagara Falls"/>
           <Checkbox name="landmarks" value="coney-island" label="Coney Island"/>
         </Checkboxgroup>
-
+        <Toggle
+          label="Dark Mode"
+          name="toggle-switch"
+          value="access"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p></Toggle>
         <Button
           type="submit"
           fullWidth
