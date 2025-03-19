@@ -30,7 +30,7 @@ In React, we must wrap the NYSDS components with lit/react to work properly.
 ---
 ---
 
-## Setting up npm link (For NYSDS contributers/developers) 🛠️
+## Setting up npm link (For NYSDS developers) 🛠️
 If you’re actively developing NYSDS Web Components (@nysds/components) and want to test changes before publishing, follow these steps:
 
 1. Link Your Local NYSDS Repo
