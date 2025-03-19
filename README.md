@@ -27,6 +27,8 @@ In React, we must wrap the NYSDS components with lit/react to work properly.
 > As of 3/8/2025, this project uses [@lit/react](https://lit.dev/docs/frameworks/react/) (v1.0.7)
 
 ---
+---
+---
 
 ## Setting up npm link (For NYSDS contributers/developers) 🛠️
 If you’re actively developing NYSDS Web Components (@nysds/components) and want to test changes before publishing, follow these steps:
