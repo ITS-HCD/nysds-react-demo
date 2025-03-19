@@ -41,9 +41,11 @@ This creates a global symlink for the NYSDS package.
 
 2. Link It in This Project
 Now, go back to your React demo project and run:
-`npm link @nysds/components`
+```
+npm link @nysds/components
+```
 
-3. Restart the Development Server
+4. Restart the Development Server
 After linking, restart the Next.js development server:
 `npm run dev`
 
