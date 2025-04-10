@@ -22,8 +22,8 @@ npm run dev
 ```
 
 ## Using NYSDS components
-You can find examples of how developers can make use of specific components in the App.tsx of this project. \
-In React, we must wrap the NYSDS components with lit/react to work properly.
+You can find examples of how developers can make use of specific components in the `App.tsx` of this project. \
+In React, we must wrap the NYSDS components with lit/react to work properly. The wrapping of the components is done in the `utils/nysds-components.ts` file
 > As of 3/8/2025, this project uses [@lit/react](https://lit.dev/docs/frameworks/react/) (v1.0.7)
 
 ---
