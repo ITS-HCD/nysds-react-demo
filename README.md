@@ -27,8 +27,10 @@ In React, we must wrap the NYSDS components with lit/react to work properly. The
 > As of 3/8/2025, this project uses [@lit/react](https://lit.dev/docs/frameworks/react/) (v1.0.7)
 
 ---
+---
+---
 
-## Setting up npm link (For NYSDS contributers/developers) 🛠️
+## Setting up npm link (For NYSDS developers) 🛠️
 If you’re actively developing NYSDS Web Components (@nysds/components) and want to test changes before publishing, follow these steps:
 
 1. Link Your Local NYSDS Repo
@@ -41,9 +43,11 @@ This creates a global symlink for the NYSDS package.
 
 2. Link It in This Project
 Now, go back to your React demo project and run:
-`npm link @nysds/components`
+```
+npm link @nysds/components
+```
 
-3. Restart the Development Server
+4. Restart the Development Server
 After linking, restart the Next.js development server:
 `npm run dev`
 
