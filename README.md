@@ -51,7 +51,4 @@ npm link @nysds/components
 After linking, restart the Next.js development server:
 `npm run dev`
 
-Now, any changes made to NYSDS Web Components will reflect immediately in this React app.
-
-### Source of reference for this project:
-https://github.com/ITS-HCD/nysds-react-webcomponents-demo
+Any changes made to NYSDS Web Components will reflect immediately in this React app.
