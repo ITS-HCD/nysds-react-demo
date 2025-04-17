@@ -2,6 +2,8 @@
 This React Demo demonstrates a basic developer usage of the NYSDS components. 
 Following the steps below, you can see how someone starting with a new React project will make use of the NYSDS components.
 
+<img width="830" alt="Screenshot 2025-04-17 at 5 21 52 PM" src="https://github.com/user-attachments/assets/24de9e90-b471-45b2-b72a-7f961df3734e" />
+
 ## Getting Started
 First, let's create a new React project. You can use the [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) to install its packages, but in React's case, we can follow the terminal instructions below.
 
