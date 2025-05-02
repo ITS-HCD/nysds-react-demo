@@ -17,6 +17,7 @@ import {
    NysToggle,
 	NysUnavFooter,
    NysUnavHeader,
+   NysSkipnav,
 } from "@nysds/components";
 import * as React from "react";
 
@@ -82,6 +83,12 @@ export const NysSelectComponent = createComponent({
 	elementClass: NysSelect,
 });
 
+export const NysSkipnavComponent = createComponent({
+	react: React,
+	tagName: "nys-skipnav",
+	elementClass: NysSkipnav,
+});
+
 export const NysTextInputComponent = createComponent({
 	react: React,
 	tagName: "nys-textinput",
@@ -111,4 +118,3 @@ export const NysUnavHeaderComponent = createComponent({
 	tagName: "nys-unavheader",
 	elementClass: NysUnavHeader,
 });
-

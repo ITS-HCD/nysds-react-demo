@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import './App.css';
-import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
 
 
 function App() {
@@ -24,10 +24,11 @@ function App() {
 
   return (
     <>
+      <NysSkipnavComponent />
       <NysUnavHeaderComponent />
       <NysGlobalHeaderComponent appName="React Demo Form" agencyName="Office of Information Technology Services" />
       
-      <main>
+      <main id='main-content'>
         <h1 className='appTitle'>Vite + React + NYSDS</h1>
         <NysAlertComponent 
           type="info"
