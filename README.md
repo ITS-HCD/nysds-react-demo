@@ -27,25 +27,28 @@ To use NYSDS components in a React project, they must be wrapped with `@lit/reac
 
 
 ## Setting up npm link (For NYSDS developers) 🛠️
-If you're actively developing the NYSDS Web Components (`@nysds/components`) and want to test local changes before publishing, you can use `npm link` to work with your local build inside this React demo
->💡 You’ll need two terminal/command prompt windows/tabs opened: one for the NYSDS component repo and one for the React demo.
+> [!Tip]
+> If you're actively developing the NYSDS Web Components and want to test local changes before publishing, you can use `npm link` to work with your local build inside this React demo project. \
+> You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS components repo and one for the React demo project.
 
 
-1. Link Your Local NYSDS Repo
+1. Link your local NYSDS repo
 Navigate to your local NYSDS Web Components repo:
 ```
 npm link
 ```
 This creates a global symlink for the NYSDS package.
 
-2. Link It in This Project
+2. Link it to this React project
 Now, go back to your React demo project and run:
 ```
 npm link @nysds/components
 ```
 
-3. Restart the Development Server
+3. Restart the development server
 After linking, restart the Next.js development server:
-`npm run dev`
+```
+npm run dev
+```
 
-Now any changes to NYSDS Web Components will be immediately reflected in this React app.
+**Now, any changes to NYSDS Web Components will be immediately reflected in this React app.**
