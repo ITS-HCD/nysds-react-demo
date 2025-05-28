@@ -23,7 +23,9 @@ npm run dev
 ```
 
 ## Using NYSDS components
-To use NYSDS components in a React project, they must be wrapped with `@lit/react` to integrate properly with the React rendering system. In this project, the components are wrapped in `utils/nysds-components.ts`, and those wrapped components are then imported and used in the `App.tsx`.
+To use NYSDS components in a React project, they must be **wrapped with `@lit/react`** to integrate properly with the React rendering system. 
+
+In this project, the components are wrapped in `utils/nysds-components.ts`, and those wrapped components are then imported and used in the `App.tsx`.
 
 
 ## Setting up npm link (For NYSDS developers) 🛠️
