@@ -47,10 +47,7 @@ function App() {
         >
           <NysTextInputComponent name='fullName' label="Full name" required 
             onNysBlur={(e) => {
-              console.log('nys-blur received 🔥', e);
-            }}
-            onBlur={(e) => {
-              console.log('Native Blur received 😖', e);
+              console.log('nys-blur event received 🔥', e);
             }}
             />
           <NysTextInputComponent name='email' label="Email" type="email" required/>
