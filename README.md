@@ -6,7 +6,7 @@ Following the steps below, you can see how someone starting a new React project 
 > [!NOTE]
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
-To start a new React project using the NYS Design System (NYSDS), you’ll need to install the required packages via `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) provides general installation guidance, but note that integrating NYSDS with React requires a slightly different approach (particularly around where we reference components & lit-react wrappings). For now, let's follow this React + TypeScript setup:
+To start a new React project using the NYS Design System (NYSDS), you’ll need to install the required packages via `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) provides general installation guidance, but integrating NYSDS with React requires a slightly different approach, particularly around where we reference components & use lit-react wrappings. For now, let's follow this React + TypeScript setup:
 
 ```
 npm create vite@latest projectName -- --template react-ts
@@ -23,7 +23,9 @@ npm run dev
 ```
 
 ## Using NYSDS components
-To use NYSDS components in a React project, they must be wrapped with `@lit/react` to integrate properly with the React rendering system. In this project, the components are wrapped in `utils/nysds-components.ts`, and those wrapped components are then imported and used in the `App.tsx`.
+To use NYSDS components in a React project, they must be **wrapped with `@lit/react`** to integrate properly with the React rendering system. 
+
+In this project, the components are wrapped in `utils/nysds-components.ts`, and those wrapped components are then imported and used in the `App.tsx`.
 
 
 ## Setting up npm link (For NYSDS developers) 🛠️
