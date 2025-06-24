@@ -2,119 +2,172 @@ import { createComponent } from "@lit/react";
 
 // Import the components so that the custom elements are registered (below are some examples we will use in this demo)
 import {
-   NysAlert,
-   NysButton,
-   NysCheckbox,
-   NysCheckboxgroup,
-   NysGlobalFooter,
-   NysGlobalHeader,
-   NysOption,
-   NysRadiobutton,
-   NysRadiogroup,
-   NysSelect,
-   NysTextarea,
-   NysTextinput,
-   NysToggle,
-	NysUnavFooter,
-   NysUnavHeader,
-   NysSkipnav,
+  NysAlert,
+  NysAvatar,
+  NysButton,
+  NysCheckbox,
+  NysCheckboxgroup,
+  NysGlobalFooter,
+  NysGlobalHeader,
+  NysOption,
+  NysRadiobutton,
+  NysRadiogroup,
+  NysSelect,
+  NysTextarea,
+  NysTextinput,
+  NysToggle,
+  NysTooltip,
+  NysUnavFooter,
+  NysUnavHeader,
+  NysSkipnav,
 } from "@nysds/components";
 import * as React from "react";
 
 /***** Further instruction on why we do this can be found on: https://lit.dev/docs/frameworks/react/ *****/
 // Wrap components
 export const NysAlertComponent = createComponent({
-	react: React,
-	tagName: "nys-alert",
-	elementClass: NysAlert,
+  react: React,
+  tagName: "nys-alert",
+  elementClass: NysAlert,
+  events: {
+    onNysAlertClosed: "nys-alertClosed",
+  },
+});
+
+export const NysAvatarComponent = createComponent({
+  react: React,
+  tagName: "nys-avatar",
+  elementClass: NysAvatar,
 });
 
 export const NysButtonComponent = createComponent({
-	react: React,
-	tagName: "nys-button",
-	elementClass: NysButton,
+  react: React,
+  tagName: "nys-button",
+  elementClass: NysButton,
+  events: {
+    onNysClick: "nys-click",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },  
 });
 
 export const NysCheckboxComponent = createComponent({
-	react: React,
-	tagName: "nys-checkbox",
-	elementClass: NysCheckbox,
+  react: React,
+  tagName: "nys-checkbox",
+  elementClass: NysCheckbox,
+  events: {
+    onNysChange: "nys-change",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },    
 });
 
 export const NysCheckboxgroupComponent = createComponent({
-	react: React,
-	tagName: "nys-checkboxgroup",
-	elementClass: NysCheckboxgroup,
+  react: React,
+  tagName: "nys-checkboxgroup",
+  elementClass: NysCheckboxgroup,
 });
 
 export const NysGlobalFooterComponent = createComponent({
-	react: React,
-	tagName: "nys-globalfooter",
-	elementClass: NysGlobalFooter,
+  react: React,
+  tagName: "nys-globalfooter",
+  elementClass: NysGlobalFooter,
 });
 
 export const NysGlobalHeaderComponent = createComponent({
-	react: React,
-	tagName: "nys-globalheader",
-	elementClass: NysGlobalHeader,
+  react: React,
+  tagName: "nys-globalheader",
+  elementClass: NysGlobalHeader,
 });
 
 export const NysOptionComponent = createComponent({
-	react: React,
-	tagName: "nys-option",
-	elementClass: NysOption,
+  react: React,
+  tagName: "nys-option",
+  elementClass: NysOption,
 });
 
 export const NysRadiobuttonComponent = createComponent({
-	react: React,
-	tagName: "nys-radiobutton",
-	elementClass: NysRadiobutton,
+  react: React,
+  tagName: "nys-radiobutton",
+  elementClass: NysRadiobutton,
+  events: {
+    onNysChange: "nys-change",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },    
 });
 
 export const NysRadioGroupComponent = createComponent({
-	react: React,
-	tagName: "nys-radiogroup",
-	elementClass: NysRadiogroup,
+  react: React,
+  tagName: "nys-radiogroup",
+  elementClass: NysRadiogroup,
 });
 
 export const NysSelectComponent = createComponent({
-	react: React,
-	tagName: "nys-select",
-	elementClass: NysSelect,
+  react: React,
+  tagName: "nys-select",
+  elementClass: NysSelect,
+  events: {
+    onNysChange: "nys-change",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },    
 });
 
 export const NysSkipnavComponent = createComponent({
-	react: React,
-	tagName: "nys-skipnav",
-	elementClass: NysSkipnav,
+  react: React,
+  tagName: "nys-skipnav",
+  elementClass: NysSkipnav,
 });
 
 export const NysTextInputComponent = createComponent({
-	react: React,
-	tagName: "nys-textinput",
-	elementClass: NysTextinput,
+  react: React,
+  tagName: "nys-textinput",
+  elementClass: NysTextinput,
+  events: {
+    onNysInput: "nys-input",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },
 });
 
 export const NysTextareaComponent = createComponent({
-	react: React,
-	tagName: "nys-textarea",
-	elementClass: NysTextarea,
+  react: React,
+  tagName: "nys-textarea",
+  elementClass: NysTextarea,
+  events: {
+    onNysInput: "nys-input",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+    onNysSelect: "nys-select",
+  },    
 });
 
 export const NysToggleComponent = createComponent({
-	react: React,
-	tagName: "nys-toggle",
-	elementClass: NysToggle,
+  react: React,
+  tagName: "nys-toggle",
+  elementClass: NysToggle,
+  events: {
+    onNysChange: "nys-change",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },    
+});
+
+export const NysTooltipComponent = createComponent({
+  react: React,
+  tagName: "nys-tooltip",
+  elementClass: NysTooltip,
 });
 
 export const NysUnavFooterComponent = createComponent({
-	react: React,
-	tagName: "nys-unavfooter",
-	elementClass: NysUnavFooter,
+  react: React,
+  tagName: "nys-unavfooter",
+  elementClass: NysUnavFooter,
 });
 
 export const NysUnavHeaderComponent = createComponent({
-	react: React,
-	tagName: "nys-unavheader",
-	elementClass: NysUnavHeader,
+  react: React,
+  tagName: "nys-unavheader",
+  elementClass: NysUnavHeader,
 });

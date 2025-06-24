@@ -45,7 +45,14 @@ function App() {
           method="POST"
           onSubmit={handleSubmit}
         >
-          <NysTextInputComponent name='fullName' label="Full name" required/>
+          <NysTextInputComponent name='fullName' label="Full name" required 
+            onNysBlur={(e) => {
+              console.log('nys-blur received 🔥', e);
+            }}
+            onBlur={(e) => {
+              console.log('Native Blur received 😖', e);
+            }}
+            />
           <NysTextInputComponent name='email' label="Email" type="email" required/>
           <NysTextareaComponent name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
           
