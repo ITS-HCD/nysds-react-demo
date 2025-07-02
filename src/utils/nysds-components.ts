@@ -7,6 +7,7 @@ import {
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
+  NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
   NysOption,
@@ -16,7 +17,7 @@ import {
   NysTextarea,
   NysTextinput,
   NysToggle,
-  NysTooltip,
+  // NysTooltip,
   NysUnavFooter,
   NysUnavHeader,
   NysSkipnav,
@@ -66,6 +67,15 @@ export const NysCheckboxgroupComponent = createComponent({
   react: React,
   tagName: "nys-checkboxgroup",
   elementClass: NysCheckboxgroup,
+});
+
+export const NysFileinputComponent = createComponent({
+  react: React,
+  tagName: "nys-fileinput",
+  elementClass: NysFileinput,
+  events: {
+    onNysFileChange : "nys-change"
+  }
 });
 
 export const NysGlobalFooterComponent = createComponent({
@@ -154,11 +164,11 @@ export const NysToggleComponent = createComponent({
   },    
 });
 
-export const NysTooltipComponent = createComponent({
-  react: React,
-  tagName: "nys-tooltip",
-  elementClass: NysTooltip,
-});
+// export const NysTooltipComponent = createComponent({
+//   react: React,
+//   tagName: "nys-tooltip",
+//   elementClass: NysTooltip,
+// });
 
 export const NysUnavFooterComponent = createComponent({
   react: React,
