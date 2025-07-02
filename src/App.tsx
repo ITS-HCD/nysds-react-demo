@@ -54,16 +54,16 @@ function App() {
           method="POST"
           onSubmit={handleSubmit}
         >
-          <NysTextInputComponent name='fullName' label="Full name"  
+          <NysTextInputComponent name='fullName' label="Full name" required 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
             }}
             />
-          <NysTextInputComponent name='email' label="Email" type="email" />
-          <NysTextareaComponent name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." />
+          <NysTextInputComponent name='email' label="Email" type="email" required/>
+          <NysTextareaComponent name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
           
           {/* Note: when wrapping components within a component, you will need a closing tag (e.g. select, radiogroup, checkboxgroup, slot wrappings for inner HTML elements) */}
-          <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" >
+          <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
             <NysOptionComponent value="government_updates" label="Government Updates" />
             <NysOptionComponent value="community_events" label="Community Events" />
             <NysOptionComponent value="public_services" label="Public Services & Resources" />
@@ -71,13 +71,13 @@ function App() {
             <NysOptionComponent value="environment" label="Environment & Sustainability" />      
           </NysSelectComponent>
 
-          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted formats: PDF, JPG" accept="image/png, image/jpeg, image/*,.pdf" multiple dropzone />
+          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, image/*,.pdf" multiple dropzone required/>
 
           <NysRadioGroupComponent
             label="How often do you want updates?"
             description="These updates will be sent directly to your email."
             size="md"
-            
+            required
           >
             <NysRadiobuttonComponent
               name="frequency"
@@ -97,13 +97,13 @@ function App() {
             id="subscribe-checkbox-disabled-checked"
             name="subscribe"
             value="email-updates"
-            
+            required
           />
 
           <NysCheckboxgroupComponent
             label="Select your favorite New York landmarks"
             description="Choose from the options below"
-            
+            required
           >
             <NysCheckboxComponent name="landmarks" label="Adirondacks" value="adirondacks" />
             <NysCheckboxComponent name="landmarks" value="finger-lakes" label="Finger Lakes" />
