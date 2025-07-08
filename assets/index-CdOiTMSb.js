@@ -3029,9 +3029,9 @@ Error generating stack: `+s.message+`
 
       ${this.dropzone?z`<div
             class="nys-fileinput__dropzone
-              ${this._dragActive?"drag-active":""}
-              ${this._isDropDisabled?"disabled":""}
-              ${this.showError&&!this._isDropDisabled?"error":""}"
+            ${this._dragActive?"drag-active":""}
+            ${this._isDropDisabled?"disabled":""}
+            ${this.showError&&!this._isDropDisabled?"error":""}"
             @click=${this._isDropDisabled?null:this._openFileDialog}
             @keydown=${n=>!this._isDropDisabled&&(n.key==="Enter"||n.key===" ")&&this._openFileDialog()}
             @dragover=${this._isDropDisabled?null:this._onDragOver}
@@ -3044,7 +3044,7 @@ Error generating stack: `+s.message+`
                     label=${this.multiple?"Choose files":"Choose file"}
                     variant="outline"
                     ?disabled=${this._isDropDisabled}
-                    .onClick=${()=>this._openFileDialog()}
+                    .onClick=${n=>{n.stopPropagation(),this._openFileDialog()}}
                   ></nys-button>
                   <p>or drag here</p>`}
           </div>`:z`<nys-button
@@ -3064,7 +3064,7 @@ Error generating stack: `+s.message+`
       ${this._selectedFiles.length>0?z`
             <ul>
               ${this._selectedFiles.map(n=>z`<li>
-                    <nys-filelistitem filename=${n.file.name} status=${n.status} progress=${n.progress} errorMessage=${n.errorMsg||""}></filelistitem>
+                    <nys-filelistitem filename=${n.file.name} status=${n.status} progress=${n.progress} errorMessage=${n.errorMsg||""}></nys-filelistitem>
                   </li>`)}
             </ul>
           `:null}
