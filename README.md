@@ -34,20 +34,20 @@ In this project, the components are wrapped in `utils/nysds-components.ts`, and 
 > You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS components repo and one for the React demo project.
 
 
-1. Link your local NYSDS repo
-Navigate to your local NYSDS Web Components repo:
+1. Link your local NYSDS repo \
+First, navigate to the terminal/cmd prompt tab that has your local NYSDS Web Components repo:
 ```
 npm link
 ```
 This creates a global symlink for the NYSDS package.
 
-2. Link it to this React project
-Now, go back to your React demo project and run:
+2. Link it to this React project \
+Next, go to the terminal/cmd prompt tab that has your React demo project and run:
 ```
 npm link @nysds/components
 ```
 
-3. Restart the development server
+3. Restart the development server \
 After linking, restart the Next.js development server:
 ```
 npm run dev
