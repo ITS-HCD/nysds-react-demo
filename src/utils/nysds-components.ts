@@ -17,7 +17,7 @@ import {
   NysTextarea,
   NysTextinput,
   NysToggle,
-  // NysTooltip,
+  NysTooltip,
   NysUnavFooter,
   NysUnavHeader,
   NysSkipnav,
@@ -164,11 +164,11 @@ export const NysToggleComponent = createComponent({
   },    
 });
 
-// export const NysTooltipComponent = createComponent({
-//   react: React,
-//   tagName: "nys-tooltip",
-//   elementClass: NysTooltip,
-// });
+export const NysTooltipComponent = createComponent({
+  react: React,
+  tagName: "nys-tooltip",
+  elementClass: NysTooltip,
+});
 
 export const NysUnavFooterComponent = createComponent({
   react: React,

@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import './App.css';
-import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
 
 
 function App() {
@@ -135,13 +135,13 @@ function App() {
             value="access"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
           </NysToggleComponent>
 
-          {/* <NysTooltipComponent text="Hello" position="bottom"> */}
+          <NysTooltipComponent text="Hello" position="bottom">
             <NysButtonComponent
               type="submit"
               fullWidth
               label="Subscribe"
             />
-          {/* </NysTooltipComponent> */}
+          </NysTooltipComponent>
         </form>
         <br></br>
         {submittedData && (
