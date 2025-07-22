@@ -54,6 +54,23 @@ function App() {
           method="POST"
           onSubmit={handleSubmit}
         >
+          <NysRadioGroupComponent
+            label="How often do you want updates?"
+            description="These updates will be sent directly to your email."
+            size="md"
+            required
+          >
+            <NysRadiobuttonComponent
+              name="frequency"
+              label="Weekly"
+              value="weekly"
+            />
+            <NysRadiobuttonComponent
+              name="frequency"
+              label="Monthly"
+              value="monthly"
+            />
+          </NysRadioGroupComponent>
           <NysTextInputComponent name='fullName' label="Full name" required 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
@@ -71,7 +88,7 @@ function App() {
             <NysOptionComponent value="environment" label="Environment & Sustainability" />      
           </NysSelectComponent>
 
-          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, image/*,.pdf" multiple dropzone required/>
+          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
 
           <NysRadioGroupComponent
             label="How often do you want updates?"
@@ -118,11 +135,13 @@ function App() {
             value="access"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
           </NysToggleComponent>
 
-          <NysButtonComponent
-            type="submit"
-            fullWidth
-            label="Subscribe"
-          />
+          {/* <NysTooltipComponent text="Hello" position="bottom"> */}
+            <NysButtonComponent
+              type="submit"
+              fullWidth
+              label="Subscribe"
+            />
+          {/* </NysTooltipComponent> */}
         </form>
         <br></br>
         {submittedData && (
