@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # Checkout your repository content
+
+      - name: Setup Node.js  # Optional: if your build process needs Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Or your desired Node.js version
+
+      - name: Install dependencies  # Optional: if your project has dependencies
+        run: npm install  # Or yarn install, pnpm install, etc.
+
+      - name: Build project  # Optional: if you have a build process to generate the 'dist' folder
+        run: npm run build  # Or yarn build, etc.
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3 # Uploads the contents of the specified path as an artifact
+        with:
+          path: ./dist # Specify the "dist" folder as the artifact source
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Deploys the GitHub Pages artifact to your website
