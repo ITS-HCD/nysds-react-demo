@@ -10,6 +10,7 @@ import {
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
+  NysIcon,
   NysOption,
   NysRadiobutton,
   NysRadiogroup,
@@ -88,6 +89,12 @@ export const NysGlobalHeaderComponent = createComponent({
   react: React,
   tagName: "nys-globalheader",
   elementClass: NysGlobalHeader,
+});
+
+export const NysIconComponent = createComponent({
+  react: React,
+  tagName: "nys-icon",
+  elementClass: NysIcon,
 });
 
 export const NysOptionComponent = createComponent({
