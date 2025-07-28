@@ -4,6 +4,7 @@ import { createComponent } from "@lit/react";
 import {
   NysAlert,
   NysAvatar,
+  NysBacktotop,
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
@@ -40,6 +41,17 @@ export const NysAvatarComponent = createComponent({
   react: React,
   tagName: "nys-avatar",
   elementClass: NysAvatar,
+});
+
+export const NysBacktotopComponent = createComponent({
+  react: React,
+  tagName: "nys-backtotop",
+  elementClass: NysBacktotop,
+  events: {
+    onNysClick: "nys-click",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },  
 });
 
 export const NysButtonComponent = createComponent({
