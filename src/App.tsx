@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import './App.css';
-// Add any new imports from the nysds-components.ts file below 
+// Add any new imports from the utils/nysds-components.ts file below 
 import { NysAlertComponent, NysBacktotopComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
 
 function App() {
