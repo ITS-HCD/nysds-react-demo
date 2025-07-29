@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import './App.css';
 // Add any new imports from the nysds-components.ts file below 
-import { NysAlertComponent, NysBacktotopComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "./utils/nysds-components";
 
 function App() {
   // State to store submitted form data
@@ -33,10 +33,6 @@ function App() {
 
   return (
     <>
-      <NysSkipnavComponent />
-      <NysUnavHeaderComponent />
-      <NysGlobalHeaderComponent appName="React Demo Form" agencyName="Office of Information Technology Services" />
-      
       <main id='main-content'>
         <h1 className='appTitle'>Vite + React + NYSDS</h1>
         <NysAlertComponent 
@@ -153,15 +149,6 @@ function App() {
           />
         )}
       </main>
-
-      <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
-        <ul>
-          <li><a href="https://its.ny.gov">ITS Home</a></li>
-          <li><a href="https://its.ny.gov/about">About ITS</a></li>
-        </ul>
-      </NysGlobalFooterComponent>
-      <NysUnavFooterComponent />
-      <NysBacktotopComponent />
     </>
   );
 }
