@@ -7,7 +7,7 @@ const HomePage = () => {
       <h1>Welcome to the React Demo</h1>
       <img src="homepage-grid.svg" alt="" role="presentation" />
       <p className="centered-link">
-        Please read the{" "}
+        Please read the
         <Link to="https://github.com/ITS-HCD/nysds-react-demo">README</Link> in
         the main repo for details on how this demo works.
       </p>
