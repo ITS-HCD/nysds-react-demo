@@ -1,7 +1,13 @@
+/* Root container for full height layout */
 #root {
-  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Global styles */
+
+/* Main layout and content */
 main {
   padding: 5rem 10rem;
 }
@@ -10,6 +16,11 @@ main h1 {
   text-align: center;
 }
 
+.main-content {
+    gap: 15px;
+}
+
+/* Form layout styling */
 form {
   display: flex;
   flex-direction: column;
@@ -26,5 +37,4 @@ form {
   form {
     gap: 1rem;
   }
-  
 }
