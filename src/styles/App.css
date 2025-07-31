@@ -8,16 +8,13 @@
 /* Global styles */
 
 /* Main layout and content */
-main {
-  padding: 5rem 10rem;
-}
-
 main h1 {
   text-align: center;
 }
 
 .main-content {
-    gap: 15px;
+  margin: 5rem 10rem;
+  gap: 15px;
 }
 
 /* Form layout styling */

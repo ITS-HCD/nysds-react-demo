@@ -33,7 +33,7 @@ const BasicForm = () => {
   };
 
   return (
-    <>
+    <div className='main-content'>
         <h1 className='appTitle'>Vite + React + NYSDS</h1>
         <NysAlertComponent 
           type="info"
@@ -148,7 +148,7 @@ const BasicForm = () => {
             dismissible
           />
         )}
-    </>
+    </div>
   );
 };
 

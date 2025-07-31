@@ -34,7 +34,7 @@ function App() {
           </li>
         </ul>
       </NysGlobalHeaderComponent>
-      <main className="nys-flex-1">
+      <main className="nys-flex-1 nys-display-flex nys-flex-column">
         <Outlet />
       </main>
       <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
