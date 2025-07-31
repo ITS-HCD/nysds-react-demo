@@ -5,8 +5,9 @@ Following the steps below, you can see how someone starting a new React project 
 ## Getting Started
 > [!NOTE]
 > This repo contains two important branches:
-> main — A simple introduction demonstrating how the NYS Design System (USWDS-based) works.
-> multipages — A more realistic multi-page setup (still under construction, so some components may be broken). Refer to the multipages branch for more context and implementation details.
+> - main — A simple introduction demonstrating how the NYS Design System works.
+> - multipages — A more realistic multi-page setup (still under construction, so some components may be broken). Refer to the multipages branch for more context and implementation details.
+> 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
 To start a new React project using the NYS Design System (NYSDS), you’ll need to install the required packages via `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) provides general installation guidance, but integrating NYSDS with React requires a slightly different approach, particularly around where we reference components & use lit-react wrappings. For now, let's follow this React + TypeScript setup:
