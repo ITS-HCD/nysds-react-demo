@@ -16,6 +16,7 @@ const ErrorPage = () => {
       <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
+        homepageLink="/"
       >
         <ul>
           <li>
@@ -35,7 +36,7 @@ const ErrorPage = () => {
       <div className="main-content nys-flex-1 nys-display-flex nys-flex-column nys-flex-align-center">
         <h1>Oh no, this route doesn't exist!</h1>
         <img src="error-image.png" alt="" role="presentation" />
-        <Link to="/">
+        <Link to="/" className="centered-link">
           You can go back to the home page by clicking here, though!
         </Link>
       </div>

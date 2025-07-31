@@ -17,6 +17,7 @@ function App() {
       <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
+        homepageLink="/"
       >
         <ul>
           <li>

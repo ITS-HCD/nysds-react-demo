@@ -16,13 +16,15 @@ import {
   NysRadiobutton,
   NysRadiogroup,
   NysSelect,
+  NysSkipnav,
+  NysStepper,
+  NysStep,
   NysTextarea,
   NysTextinput,
   NysToggle,
   NysTooltip,
   NysUnavFooter,
   NysUnavHeader,
-  NysSkipnav,
 } from "@nysds/components";
 import * as React from "react";
 
@@ -51,7 +53,7 @@ export const NysBacktotopComponent = createComponent({
     onNysClick: "nys-click",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },  
+  },
 });
 
 export const NysButtonComponent = createComponent({
@@ -62,7 +64,7 @@ export const NysButtonComponent = createComponent({
     onNysClick: "nys-click",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },  
+  },
 });
 
 export const NysCheckboxComponent = createComponent({
@@ -73,7 +75,7 @@ export const NysCheckboxComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysCheckboxgroupComponent = createComponent({
@@ -87,8 +89,8 @@ export const NysFileinputComponent = createComponent({
   tagName: "nys-fileinput",
   elementClass: NysFileinput,
   events: {
-    onNysFileChange : "nys-change"
-  }
+    onNysFileChange: "nys-change",
+  },
 });
 
 export const NysGlobalFooterComponent = createComponent({
@@ -123,7 +125,7 @@ export const NysRadiobuttonComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysRadioGroupComponent = createComponent({
@@ -140,13 +142,28 @@ export const NysSelectComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysSkipnavComponent = createComponent({
   react: React,
   tagName: "nys-skipnav",
   elementClass: NysSkipnav,
+});
+
+export const NysStepperComponent = createComponent({
+  react: React,
+  tagName: "nys-stepper",
+  elementClass: NysStepper,
+  events: {
+    onNysStepClick: "nys-step-click",
+  }
+});
+
+export const NysStepComponent = createComponent({
+  react: React,
+  tagName: "nys-step",
+  elementClass: NysStep,
 });
 
 export const NysTextInputComponent = createComponent({
@@ -169,7 +186,7 @@ export const NysTextareaComponent = createComponent({
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
     onNysSelect: "nys-select",
-  },    
+  },
 });
 
 export const NysToggleComponent = createComponent({
@@ -180,7 +197,7 @@ export const NysToggleComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysTooltipComponent = createComponent({

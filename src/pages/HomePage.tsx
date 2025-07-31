@@ -6,13 +6,11 @@ const HomePage = () => {
     <div className="main-content nys-display-flex nys-flex-column nys-flex-align-center">
       <h1>Welcome to the React Demo</h1>
       <img src="homepage-grid.svg" alt="" role="presentation" />
-      <Link
-        to="https://github.com/ITS-HCD/nysds-react-demo"
-        className="--nys-font-size-5xl centered-link"
-      >
-        Please read the README found on the main repo about the usage of this
-        demo
-      </Link>
+      <p className="centered-link">
+        Please read the{" "}
+        <Link to="https://github.com/ITS-HCD/nysds-react-demo">README</Link> in
+        the main repo for details on how this demo works.
+      </p>
     </div>
   );
 };
