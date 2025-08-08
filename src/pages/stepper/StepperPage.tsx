@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 
-import {
-  NysStepperComponent,
-  NysStepComponent,
-  NysButtonComponent
-} from "../../utils/nysds-components";
+// import {
+//   NysStepperComponent,
+//   NysStepComponent,
+//   NysButtonComponent
+// } from "../../utils/nysds-components";
 
 const StepperPage = () => {
   return (
     <div className="nys-flex-1 nys-display-flex">
-      <NysStepperComponent label="Register for Design System Office Hours">
+      {/* <NysStepperComponent label="Register for Design System Office Hours">
         <NysStepComponent
           label="Home"
           href="/"
@@ -35,7 +35,7 @@ const StepperPage = () => {
             fullWidth
           />
         </div>
-      </NysStepperComponent>
+      </NysStepperComponent> */}
       <form action="">
         <Outlet />
       </form>

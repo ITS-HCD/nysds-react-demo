@@ -49,22 +49,21 @@ const BasicForm = () => {
           className="nys-newsletter-form"
           method="POST"
           onSubmit={handleSubmit}
-        >
-          <NysRadioGroupComponent
-            label="How often do you want updates?"
-            description="These updates will be sent directly to your email."
+        >          <NysRadioGroupComponent
+            label="Do you like cats or dogs?"
+            description="You must select one"
             size="md"
             required
           >
             <NysRadiobuttonComponent
-              name="frequency"
-              label="Weekly"
-              value="weekly"
+              name="animal"
+              label="Dog"
+              value="dog"
             />
             <NysRadiobuttonComponent
-              name="frequency"
-              label="Monthly"
-              value="monthly"
+              name="animal"
+              label="Cat"
+              value="cat"
             />
           </NysRadioGroupComponent>
           <NysTextInputComponent name='fullName' label="Full name" required 
