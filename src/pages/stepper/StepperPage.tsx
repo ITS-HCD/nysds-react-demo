@@ -104,19 +104,19 @@ const StepperPage = () => {
       <NysStepperComponent className="nys-desktop:nys-grid-col-3" label="Register for Design System Office Hours">
         <NysStepComponent
           label="Sample 1"
-          href="sample1"
+          onClick={() => setCurrentStep(1)}
           selected={currentStep === 1}
           current={maxStepReached === 1}
         />
         <NysStepComponent
           label="Sample 2"
-          href="sample2"
+          onClick={() => setCurrentStep(2)}
           selected={currentStep === 2}
           current={maxStepReached === 2}
         />
         <NysStepComponent
           label="Sample 3"
-          href="sample3"
+          onClick={() => setCurrentStep(3)}
           selected={currentStep === 3}
           current={maxStepReached === 3}
         />
