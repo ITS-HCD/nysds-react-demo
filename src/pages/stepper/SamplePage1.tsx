@@ -1,4 +1,4 @@
-import { NysTextInputComponent } from "../../utils/nysds-components";
+import { NysTextInputComponent, NysButtonComponent } from "../../utils/nysds-components";
 
 const SamplePage1 = () => {
   return (
@@ -20,6 +20,10 @@ const SamplePage1 = () => {
       <NysTextInputComponent name="phone" label="Phone Number" type="tel" />
 
       <NysTextInputComponent name="address" label="Street Address" />
+
+      <div className="button-container nys-display-flex">
+        <NysButtonComponent label="Next" href="sample2"></NysButtonComponent>
+      </div>
     </div>
   );
 };

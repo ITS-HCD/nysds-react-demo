@@ -24,13 +24,13 @@ function App() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="basic-form">Basic Form</a>
+            <a href="/basic-form">Basic Form</a>
           </li>
           <li>
-            <a href="stepper">Stepper</a>
+            <a href="/stepper">Stepper</a>
           </li>
           <li>
-            <a href="about">About</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </NysGlobalHeaderComponent>

@@ -2,6 +2,8 @@ import { createComponent } from "@lit/react";
 
 // Import the components so that the custom elements are registered (below are some examples we will use in this demo)
 import {
+  // NysAccordion,
+  // NysAccordiongroup,
   NysAlert,
   NysAvatar,
   NysBacktotop,
@@ -17,8 +19,8 @@ import {
   NysRadiogroup,
   NysSelect,
   NysSkipnav,
-  // NysStepper,
-  // NysStep,
+  NysStepper,
+  NysStep,
   NysTextarea,
   NysTextinput,
   NysToggle,
@@ -30,6 +32,21 @@ import * as React from "react";
 
 /***** Further instruction on why we do this can be found on: https://lit.dev/docs/frameworks/react/ *****/
 // Wrap components
+// export const NysAccordiongroupComponent = createComponent({
+//   react: React,
+//   tagName: "nys-accordiongroup",
+//   elementClass: NysAccordiongroup,
+// });
+
+// export const NysAccordionComponent = createComponent({
+//   react: React,
+//   tagName: "nys-accordion",
+//   elementClass: NysAccordion,
+//   events: {
+//     onNysAccordionToggle: "nys-accordionToggle",
+//   },
+// });
+
 export const NysAlertComponent = createComponent({
   react: React,
   tagName: "nys-alert",
@@ -151,20 +168,20 @@ export const NysSkipnavComponent = createComponent({
   elementClass: NysSkipnav,
 });
 
-// export const NysStepperComponent = createComponent({
-//   react: React,
-//   tagName: "nys-stepper",
-//   elementClass: NysStepper,
-//   events: {
-//     onNysStepClick: "nys-step-click",
-//   }
-// });
+export const NysStepperComponent = createComponent({
+  react: React,
+  tagName: "nys-stepper",
+  elementClass: NysStepper,
+  events: {
+    onNysStepClick: "nys-step-click",
+  }
+});
 
-// export const NysStepComponent = createComponent({
-//   react: React,
-//   tagName: "nys-step",
-//   elementClass: NysStep,
-// });
+export const NysStepComponent = createComponent({
+  react: React,
+  tagName: "nys-step",
+  elementClass: NysStep,
+});
 
 export const NysTextInputComponent = createComponent({
   react: React,

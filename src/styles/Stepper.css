@@ -1,0 +1,16 @@
+/** 
+* Because at the time of writing this, the NYSDS does not support flex-gaps & other content betweens yet, 
+* I am manually adding the gap here 
+*/
+.button-container {
+    gap: 10px; 
+    justify-content: space-between;
+}
+
+/* Stepper.css */
+.stepper-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

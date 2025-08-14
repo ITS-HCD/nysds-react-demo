@@ -1,3 +1,7 @@
+/**
+* This is the main styling being applied across all pages.
+**/
+
 /* Root container for full height layout */
 #root {
   min-height: 100vh;
