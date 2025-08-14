@@ -5,6 +5,7 @@
 .button-container {
     gap: 10px; 
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 /* Stepper.css */
@@ -13,4 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,6 +1,6 @@
 import {
   NysTextareaComponent,
-  NysButtonComponent,
+  // NysButtonComponent,
 } from "../../utils/nysds-components";
 
 const SamplePage3 = () => {
@@ -14,10 +14,10 @@ const SamplePage3 = () => {
         required
       />
 
-      <div className="button-container nys-display-flex">
+      {/* <div className="button-container nys-display-flex">
         <NysButtonComponent label="Back" href="sample2"></NysButtonComponent>
         <NysButtonComponent type="submit" label="Submit" variant="outline"></NysButtonComponent>
-      </div>
+      </div> */}
     </div>
   );
 };

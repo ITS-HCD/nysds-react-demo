@@ -2,7 +2,7 @@ import {
   NysTextInputComponent,
   // NysAccordionComponent,
   // NysAccordiongroupComponent,
-  NysButtonComponent,
+  // NysButtonComponent,
 } from "../../utils/nysds-components";
 
 const SamplePage2 = () => {
@@ -37,13 +37,13 @@ const SamplePage2 = () => {
         </NysAccordionComponent>
       </NysAccordiongroupComponent> */}
 
-      <div className="button-container nys-display-flex">
+      {/* <div className="button-container nys-display-flex">
         <NysButtonComponent
           label="Previous"
           href="sample1"
         ></NysButtonComponent>
         <NysButtonComponent label="Next" href="sample3"></NysButtonComponent>
-      </div>
+      </div> */}
     </div>
   );
 };

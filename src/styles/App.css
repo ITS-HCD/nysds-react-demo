@@ -31,9 +31,6 @@ form {
 }
 
 @media screen and (max-width: 768px) {
-  main {
-    padding: 2rem 1rem;
-  }
 
   form {
     gap: 1rem;
