@@ -5,7 +5,7 @@ import {
 
 const SamplePage1 = () => {
   return (
-    <div className="main-content nys-display-flex nys-flex-column nys-flex-justify">
+    <div className="main-content stepper-content nys-display-flex nys-flex-column nys-flex-justify">
       <h1>Personal Details (Sample 1)</h1>
       <p>
         This is the form to enter your personal information. Fill in your name,

@@ -17,13 +17,16 @@ h1 {
 }
 
 .main-content {
-  margin: 5rem 10rem;
+  margin: 5rem 2rem;
   gap: 15px;
 }
 
-@media screen and (max-width: 768px) {
+.main-content.stepper-content {
+  margin-bottom: 1rem;
+}
 
-  form {
-    gap: 1rem;
+@media screen and (min-width: 768px) {
+  .main-content {
+    margin: 5rem 10rem;
   }
 }

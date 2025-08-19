@@ -5,7 +5,7 @@ import {
 
 const SamplePage3 = () => {
   return (
-    <div className="main-content nys-display-flex nys-flex-column nys-flex-justify">
+    <div className="main-content stepper-content nys-display-flex nys-flex-column nys-flex-justify">
       <h1>Usage Survey (Sample 3)</h1>
       <NysTextareaComponent
         name="quote"

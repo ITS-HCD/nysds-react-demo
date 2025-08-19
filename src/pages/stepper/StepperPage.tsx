@@ -12,14 +12,14 @@ import {
 } from "../../utils/nysds-components";
 
 const StepperPage = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [selectStep, setSelectStep] = useState(1);
   const [maxStepReached, setMaxStepReached] = useState(1);
 
-  const handleBack = () => setCurrentStep((step) => Math.max(step - 1, 1));
+  const handleBack = () => setSelectStep((step) => Math.max(step - 1, 1));
 
   const handleNext = () => {
-    if (validateCurrentStep()) {
-      setCurrentStep((step) => {
+    if (validateSelectStep()) {
+      setSelectStep((step) => {
         const nextStep = Math.min(step + 1, 3)
         setMaxStepReached((prev) => Math.max(prev, nextStep)); // update latest reached
         return nextStep;
@@ -33,14 +33,14 @@ const StepperPage = () => {
    * Validate all form-associated elements (native + nys-components) in the current step.
    * This is so we don't allow users to navigate to the next step without first fulfilling the current step requirements
    * */
-  const validateCurrentStep = (): boolean => {
+  const validateSelectStep = (): boolean => {
     // get the form element
     const form = document.querySelector(".stepper-form") as HTMLFormElement;
     if (!form) return false;
 
     // Get the current step's container
-    const currentStepDiv = form.querySelector(
-      `.step-page:nth-child(${currentStep})`
+    const selectStepDiv = form.querySelector(
+      `.step-page:nth-child(${selectStep})`
     ) as HTMLElement;
 
     // Collect all form-associated elements (native + nys-components)
@@ -49,7 +49,7 @@ const StepperPage = () => {
     }
 
     const elements: ValidatableElement[] = Array.from(
-      Array.from(currentStepDiv.querySelectorAll<HTMLElement>("*")).filter(
+      Array.from(selectStepDiv.querySelectorAll<HTMLElement>("*")).filter(
         (el) => typeof (el as ValidatableElement).checkValidity === "function"
       )
     );
@@ -104,20 +104,20 @@ const StepperPage = () => {
       <NysStepperComponent className="nys-desktop:nys-grid-col-3" label="Register for Design System Office Hours">
         <NysStepComponent
           label="Sample 1"
-          onClick={() => setCurrentStep(1)}
-          selected={currentStep === 1}
+          onClick={() => setSelectStep(1)}
+          selected={selectStep === 1}
           current={maxStepReached === 1}
         />
         <NysStepComponent
           label="Sample 2"
-          onClick={() => setCurrentStep(2)}
-          selected={currentStep === 2}
+          onClick={() => setSelectStep(2)}
+          selected={selectStep === 2}
           current={maxStepReached === 2}
         />
         <NysStepComponent
           label="Sample 3"
-          onClick={() => setCurrentStep(3)}
-          selected={currentStep === 3}
+          onClick={() => setSelectStep(3)}
+          selected={selectStep === 3}
           current={maxStepReached === 3}
         />
         <div slot="actions">
@@ -130,25 +130,25 @@ const StepperPage = () => {
       </NysStepperComponent>
 
       <form action="" className="stepper-form" onSubmit={handleSubmit}>
-        <div className={`step-page ${currentStep === 1 ? "" : "hidden"}`}>
+        <div className={`step-page ${selectStep === 1 ? "" : "hidden"}`}>
           <SamplePage1 />
         </div>
-        <div className={`step-page ${currentStep === 2 ? "" : "hidden"}`}>
+        <div className={`step-page ${selectStep === 2 ? "" : "hidden"}`}>
           <SamplePage2 />
         </div>
-        <div className={`step-page ${currentStep === 3 ? "" : "hidden"}`}>
+        <div className={`step-page ${selectStep === 3 ? "" : "hidden"}`}>
           <SamplePage3 />
         </div>
 
         <div className="button-container nys-display-flex">
-          {currentStep > 1 && (
+          {selectStep > 1 && (
             <NysButtonComponent
               type="button"
               label="Back"
               onClick={handleBack}
             />
           )}
-          {currentStep < 3 ? (
+          {selectStep < 3 ? (
             <NysButtonComponent
               type="button"
               label="Next"
