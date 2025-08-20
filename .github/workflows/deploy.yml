@@ -18,22 +18,15 @@ jobs:
       - name: Setup Node.js  # Optional: if your build process needs Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Or your desired Node.js version
+          node-version: '22' # Or your desired Node.js version
 
-      - name: Install dependencies  # Optional: if your project has dependencies
-        run: npm install  # Or yarn install, pnpm install, etc.
+      - name: Install dependencies and Build  # Optional: if your project has dependencies
+        run: |
+          npm install
+          npm run build
 
-      - name: Build project  # Optional: if you have a build process to generate the 'dist' folder
-        run: npm run build  # Or yarn build, etc.
-
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3 # Uploads the contents of the specified path as an artifact
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./dist # Specify the "dist" folder as the artifact source
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
-        with:
-          branch: gh-pages # Specify the branch to deploy to
-          token: ${{ secrets.GITHUB_TOKEN }} # Use the GITHUB_TOKEN for authentication
+          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
