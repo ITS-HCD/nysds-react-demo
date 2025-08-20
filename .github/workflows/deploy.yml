@@ -37,6 +37,8 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        run: |
+          ls /home/runner/work/nysds-react-demo/nysds-react-dem0 -al
         with:
           publish_dir: dist
           keep_files: true
