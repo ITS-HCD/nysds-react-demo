@@ -25,6 +25,9 @@ jobs:
         run: |
           npm install
           npm run build
+          ls /home/runner/work/ -al
+          ls /home/runner/work/nysds-react-demo/ -al
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
