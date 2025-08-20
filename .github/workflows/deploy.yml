@@ -14,10 +14,10 @@ jobs:
       id-token: write   # to verify the deployment originates from an appropriate source
       contents: write
     steps:
-      - uses: actions/checkout@v4 # Checkout your repository content
+      - uses: actions/checkout@v2 # Checkout your repository content
 
       - name: Setup Node.js  # Optional: if your build process needs Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v1
         with:
           node-version: '22' # Or your desired Node.js version
 
@@ -27,7 +27,7 @@ jobs:
           npm run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ../dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
