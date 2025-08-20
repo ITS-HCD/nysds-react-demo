@@ -19,7 +19,7 @@ jobs:
       id-token: write   # to verify the deployment originates from an appropriate source
       contents: write
     steps:
-      - uses: actions/checkout@v2 # Checkout your repository content
+      - uses: actions/checkout@v4 # Checkout your repository content
 
       - name: Setup Node.js  ${{ matrix.node-version }} # Optional: if your build process needs Node.js
         uses: actions/setup-node@v1
