@@ -29,11 +29,11 @@ jobs:
           ls /home/runner/work/nysds-react-demo/ -al
           ls /home/runner/work/nysds-react-demo/nysds-react-demo/ -al
           ls /home/runner/work/nysds-react-demo/nysds-react-demo/dist -al
-          
+
 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ../dist
+          publish_dir: ./dist/
           github_token: ${{ secrets.GITHUB_TOKEN }}
