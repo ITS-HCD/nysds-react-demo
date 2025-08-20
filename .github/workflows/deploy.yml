@@ -27,6 +27,7 @@ jobs:
           npm run build
           ls /home/runner/work/ -al
           ls /home/runner/work/nysds-react-demo/ -al
+          ls /home/runner/work/nysds-react-demo/nysds-react-demo/ -al
 
 
       - name: Deploy
