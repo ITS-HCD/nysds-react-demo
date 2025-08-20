@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
@@ -16,10 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # Checkout your repository content
 
-      - name: Setup Node.js  # Optional: if your build process needs Node.js
+      - name: Setup Node.js  ${{ matrix.node-version }} # Optional: if your build process needs Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '22' # Or your desired Node.js version
+          node-version: ${{ matrix.node-version }} # Or your desired Node.js version
 
       - name: Install dependencies and Build  # Optional: if your project has dependencies
         run: |
@@ -30,14 +35,8 @@ jobs:
           ls /home/runner/work/nysds-react-demo/nysds-react-demo/ -al
           ls /home/runner/work/nysds-react-demo/nysds-react-demo/dist -al
 
-
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./dist
+          publish_dir: dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install dependencies and Build  # Optional: if your project has dependencies
-        run: |
-          ls /home/runner/work/nysds-react-demo/nysds-react-demo/dist -al
