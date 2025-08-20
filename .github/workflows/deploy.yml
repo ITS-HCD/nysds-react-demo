@@ -26,11 +26,8 @@ jobs:
       - name: Build project  # Optional: if you have a build process to generate the 'dist' folder
         run: npm run build  # Or yarn build, etc.
 
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3 # Uploads the contents of the specified path as an artifact
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./dist # Specify the "dist" folder as the artifact source
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # Deploys the GitHub Pages artifact to your website
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
