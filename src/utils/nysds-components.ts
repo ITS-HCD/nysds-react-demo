@@ -3,6 +3,7 @@ import { createComponent } from "@lit/react";
 // Import the components so that the custom elements are registered (below are some examples we will use in this demo)
 import {
   NysAccordion,
+  NysAccordionItem,
   NysAlert,
   NysAvatar,
   NysBacktotop,
@@ -34,8 +35,14 @@ export const NysAccordionComponent = createComponent({
   react: React,
   tagName: "nys-accordion",
   elementClass: NysAccordion,
+});
+
+export const NysAccordionItemComponent = createComponent({
+  react: React,
+  tagName: "nys-accordionitem",
+  elementClass: NysAccordionItem,
   events: {
-    onNysAlertClosed: "nys-accordionitem-toggle",
+    onNysAccordionItemToggle: "nys-accordionitem-toggle",
   },
 });
 
