@@ -54,23 +54,6 @@ function App() {
           method="POST"
           onSubmit={handleSubmit}
         >
-          <NysRadioGroupComponent
-            label="How often do you want updates?"
-            description="These updates will be sent directly to your email."
-            size="md"
-            required
-          >
-            <NysRadiobuttonComponent
-              name="frequency"
-              label="Weekly"
-              value="weekly"
-            />
-            <NysRadiobuttonComponent
-              name="frequency"
-              label="Monthly"
-              value="monthly"
-            />
-          </NysRadioGroupComponent>
           <NysTextInputComponent name='fullName' label="Full name" required 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
@@ -89,6 +72,7 @@ function App() {
           </NysSelectComponent>
 
           <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
+          <NysTextInputComponent name='test' label="test" type="text" required/>
 
           <NysRadioGroupComponent
             label="How often do you want updates?"

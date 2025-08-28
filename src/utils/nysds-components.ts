@@ -2,9 +2,11 @@ import { createComponent } from "@lit/react";
 
 // Import the components so that the custom elements are registered (below are some examples we will use in this demo)
 import {
+  NysAccordion,
   NysAlert,
   NysAvatar,
   NysBacktotop,
+  NysBadge,
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
@@ -28,12 +30,21 @@ import * as React from "react";
 
 /***** Further instruction on why we do this can be found on: https://lit.dev/docs/frameworks/react/ *****/
 // Wrap components
+export const NysAccordionComponent = createComponent({
+  react: React,
+  tagName: "nys-accordion",
+  elementClass: NysAccordion,
+  events: {
+    onNysAlertClosed: "nys-accordionitem-toggle",
+  },
+});
+
 export const NysAlertComponent = createComponent({
   react: React,
   tagName: "nys-alert",
   elementClass: NysAlert,
   events: {
-    onNysAlertClosed: "nys-alertClosed",
+    onNysAlertClosed: "nys-close",
   },
 });
 
@@ -52,6 +63,12 @@ export const NysBacktotopComponent = createComponent({
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
   },  
+});
+
+export const NysBadgeComponent = createComponent({
+  react: React,
+  tagName: "nys-badge",
+  elementClass: NysBadge,
 });
 
 export const NysButtonComponent = createComponent({
