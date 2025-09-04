@@ -100,7 +100,7 @@ const StepperPage = () => {
   };
 
   return (
-    <div className="nys-grid-row">
+    <div className="nys-flex-1 nys-grid-row">
       <NysStepperComponent className="nys-desktop:nys-grid-col-3" label="Register for Design System Office Hours">
         <NysStepComponent
           label="Sample 1"

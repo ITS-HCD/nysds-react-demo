@@ -1,8 +1,7 @@
 import {
   NysTextInputComponent,
-  // NysAccordionItemComponent,
-  // NysAccordionComponent,
-  // NysButtonComponent,
+  NysAccordionItemComponent,
+  NysAccordionComponent,
 } from "../../utils/nysds-components";
 
 const SamplePage2 = () => {
@@ -36,14 +35,6 @@ const SamplePage2 = () => {
           </ul>
         </NysAccordionItemComponent>
       </NysAccordionComponent>
-
-      {/* <div className="button-container nys-display-flex">
-        <NysButtonComponent
-          label="Previous"
-          href="sample1"
-        ></NysButtonComponent>
-        <NysButtonComponent label="Next" href="sample3"></NysButtonComponent>
-      </div> */}
     </div>
   );
 };

@@ -19,8 +19,8 @@ import {
   NysRadiogroup,
   NysSelect,
   NysSkipnav,
-  // NysStepper,
-  // NysStep,
+  NysStepper,
+  NysStep,
   NysTextarea,
   NysTextinput,
   NysToggle,
@@ -168,20 +168,20 @@ export const NysSkipnavComponent = createComponent({
   elementClass: NysSkipnav,
 });
 
-// export const NysStepperComponent = createComponent({
-//   react: React,
-//   tagName: "nys-stepper",
-//   elementClass: NysStepper,
-//   events: {
-//     onNysStepClick: "nys-step-click",
-//   }
-// });
+export const NysStepperComponent = createComponent({
+  react: React,
+  tagName: "nys-stepper",
+  elementClass: NysStepper,
+  events: {
+    onNysStepClick: "nys-step-click",
+  }
+});
 
-// export const NysStepComponent = createComponent({
-//   react: React,
-//   tagName: "nys-step",
-//   elementClass: NysStep,
-// });
+export const NysStepComponent = createComponent({
+  react: React,
+  tagName: "nys-step",
+  elementClass: NysStep,
+});
 
 export const NysTextInputComponent = createComponent({
   react: React,
