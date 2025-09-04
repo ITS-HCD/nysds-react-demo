@@ -19,13 +19,15 @@ import {
   NysRadiobutton,
   NysRadiogroup,
   NysSelect,
+  NysSkipnav,
+  NysStepper,
+  NysStep,
   NysTextarea,
   NysTextinput,
   NysToggle,
   NysTooltip,
   NysUnavFooter,
   NysUnavHeader,
-  NysSkipnav,
 } from "@nysds/components";
 import * as React from "react";
 
@@ -171,6 +173,21 @@ export const NysSkipnavComponent = createComponent({
   react: React,
   tagName: "nys-skipnav",
   elementClass: NysSkipnav,
+});
+
+export const NysStepperComponent = createComponent({
+  react: React,
+  tagName: "nys-stepper",
+  elementClass: NysStepper,
+  events: {
+    onNysStepClick: "nys-step-click",
+  }
+});
+
+export const NysStepComponent = createComponent({
+  react: React,
+  tagName: "nys-step",
+  elementClass: NysStep,
 });
 
 export const NysTextInputComponent = createComponent({
