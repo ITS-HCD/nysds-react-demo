@@ -50,23 +50,7 @@ const BasicForm = () => {
           className="nys-newsletter-form"
           method="POST"
           onSubmit={handleSubmit}
-        >          <NysRadioGroupComponent
-            label="Do you like cats or dogs?"
-            description="You must select one"
-            size="md"
-            required
-          >
-            <NysRadiobuttonComponent
-              name="animal"
-              label="Dog"
-              value="dog"
-            />
-            <NysRadiobuttonComponent
-              name="animal"
-              label="Cat"
-              value="cat"
-            />
-          </NysRadioGroupComponent>
+        >       
           <NysTextInputComponent name='fullName' label="Full name" required 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
@@ -128,7 +112,7 @@ const BasicForm = () => {
           <NysToggleComponent
             label="Dark Mode"
             name="toggle-switch"
-            value="access"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
+            value="dark_mode_on"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
           </NysToggleComponent>
 
           <NysTooltipComponent text="Hello" position="bottom">
