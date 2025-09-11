@@ -8,6 +8,7 @@ import SamplePage2 from "../pages/stepper/SamplePage2.tsx";
 import SamplePage3 from "../pages/stepper/SamplePage3.tsx";
 import ErrorPage from "../pages/ErrorPage.tsx";
 
+// Define the app's route configuration here so it can be provided to RouterProvider in main.tsx
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
     ],
     errorElement: <ErrorPage />,
   },
-]);
+], { basename: "/nysds-react-demo" });
 
 const AppRouter = () => <RouterProvider router={router} />;
 
