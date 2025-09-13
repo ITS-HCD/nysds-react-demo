@@ -63,3 +63,24 @@ npm run dev
 ```
 
 **Now, any changes to NYSDS Web Components will be immediately reflected in this React app.**
+
+## Deploying 📦
+This project uses [gh-pages](https://github.com/tschaub/gh-pages) to deploy the build output to GitHub Pages.
+
+### Setup
+- Make sure `gh-pages` is installed (already listed in `package.json`).
+
+### Commands
+- `npm run build`  
+  Builds the project into the `dist/` folder using Vite.
+
+- `npm run deploy`  
+  Publishes the contents of `dist/` to the `gh-pages` branch.
+
+### Deployment Process
+1. Run `npm run build` to create the production build.
+2. Run `npm run deploy` to push the build to GitHub Pages.
+3. The site will be available at:  
+   `https://<github-username>.github.io/<repo-name>/`
+
+> Note: The `base` option in `vite.config.js` should match the repository name (e.g., `/nysds-react-demo/`) so assets load correctly.
