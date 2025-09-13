@@ -16,7 +16,7 @@ import ErrorPage from "../pages/ErrorPage.tsx";
 const router = createBrowserRouter(
   [
     {
-      path: "nysds-react-demo",
+      path: "/",
       element: <App />,
       children: [
         { index: true, element: <HomePage /> },
@@ -35,9 +35,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
     },
   ],
-  {
-    basename: import.meta.env.BASE_URL,
-  }
+  { basename: "/nysds-react-demo" } // this allows all our routes to start with this url
 );
 
 const AppRouter = () => <RouterProvider router={router} />;

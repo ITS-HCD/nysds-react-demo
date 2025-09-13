@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="main-content nys-display-flex nys-flex-column nys-flex-align-center">
       <h1>Welcome to the React Demo</h1>
-      <img src="homepage-grid.svg" alt="" role="presentation" />
+      <img src="/nysds-react-demo/homepage-grid.svg" alt="" role="presentation" />
       <p className="centered-link">
         Please read the{" "}
         <Link to="https://github.com/ITS-HCD/nysds-react-demo">README</Link> in
