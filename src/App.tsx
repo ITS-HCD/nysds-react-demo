@@ -17,20 +17,20 @@ function App() {
       <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
-        homepageLink="/"
+        homepageLink="/nysds-react-demo"
       >
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/nysds-react-demo">Home</a>
           </li>
           <li>
-            <a href="/basic-form">Basic Form</a>
+            <a href="/nysds-react-demo/basic-form">Basic Form</a>
           </li>
           <li>
-            <a href="/stepper">Stepper</a>
+            <a href="/nysds-react-demo/stepper">Stepper</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/nysds-react-demo/about">About</a>
           </li>
         </ul>
       </NysGlobalHeaderComponent>
