@@ -24,13 +24,13 @@ function App() {
             <a href="/nysds-react-demo">Home</a>
           </li>
           <li>
-            <a href="/nysds-react-demo/basic-form">Basic Form</a>
+            <a href="/nysds-react-demo/#/basic-form">Basic Form</a>
           </li>
           <li>
-            <a href="/nysds-react-demo/stepper">Stepper</a>
+            <a href="/nysds-react-demo/#/stepper">Stepper</a>
           </li>
           <li>
-            <a href="/nysds-react-demo/about">About</a>
+            <a href="/nysds-react-demo/#/about">About</a>
           </li>
         </ul>
       </NysGlobalHeaderComponent>
