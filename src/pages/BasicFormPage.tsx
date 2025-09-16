@@ -123,44 +123,6 @@ const BasicForm = () => {
             />
           </NysTooltipComponent>
         </form>
-
-        <NysTextInputComponent form="myForm" name='telephone' label="telephone" type="tel" required/>
-        <NysRadioGroupComponent
-          label="Which NYS service do you want to access online?"
-          description="Select the service you need. Your choice will determine which application form is shown."
-          size="md"
-          required
-          form="myForm"
-        >
-          <NysRadiobuttonComponent
-            name="nys-service"
-            label="Apply for STAR property tax relief"
-            value="star"
-          />
-          <NysRadiobuttonComponent
-            name="nys-service"
-            label="Renew vehicle registration"
-            value="dmv-registration"
-          />
-          <NysRadiobuttonComponent
-            name="nys-service"
-            label="Check SNAP eligibility"
-            value="snap"
-          />
-        </NysRadioGroupComponent>
-
-        <NysCheckboxgroupComponent
-            label="Select your favorite New York landmarks"
-            description="Choose from the options below"
-            form="myForm"
-            required
-          >
-            <NysCheckboxComponent name="landmarks" label="Adirondacks" value="adirondacks" />
-            <NysCheckboxComponent name="landmarks" value="finger-lakes" label="Finger Lakes" />
-            <NysCheckboxComponent name="landmarks" value="catskills" label="Catskills" />
-            <NysCheckboxComponent name="landmarks" value="niagara-falls" label="Niagara Falls"/>
-            <NysCheckboxComponent name="landmarks" value="coney-island" label="Coney Island"/>
-          </NysCheckboxgroupComponent>
         <br></br>
         {submittedData && (
           <NysAlertComponent
