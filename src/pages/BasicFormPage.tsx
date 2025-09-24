@@ -1,20 +1,31 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useRef } from 'react';
 import '../styles/App.css';
 import '../styles/BasicForm.css';
 // Add any new imports from the nysds-components.ts file below 
-import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
-
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysModalComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
+import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
 
 const BasicForm = () => {
   // State to store submitted form data
   const [submittedData, setSubmittedData] = useState<Record<string, unknown> | null>(null);
+  // Makes a reference to the <nys-modal>
+  const modalRef = useRef<NysModal>(null);
 
+  /**
+   * This function is meant to demonstrate the handling of form submission with NYSDS components.
+   * Note how we perform serializeFormData() to get all the details from the FormData
+   * @param e 
+   */
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
+    const data = serializeFormData(e.target as HTMLFormElement);
+    alert('Form Data:\n' + JSON.stringify(data, null, 2));
+    setSubmittedData(data);
+  };
 
-    // Convert FormData to a plain object
+  const serializeFormData = (form: HTMLFormElement) => {
     const data: Record<string, unknown> = {};
+    const formData = new FormData(form);
 
     for (const [key, value] of formData.entries()) {
       const allValues = formData.getAll(key);
@@ -28,10 +39,32 @@ const BasicForm = () => {
           : value;
       }
     }
-
-    alert('Form Data:\n' + JSON.stringify(data, null, 2));
-    setSubmittedData(data);
+    return data;
   };
+
+
+  /**
+   * Below are the functions for opening, closing, and saving with the <nys-modal>
+   * Note how we perform serializeFormData() to get all the details from the FormData
+   */
+  const openModal = () => {
+    // Note: we use ref instead of document.getElementById like native JS for React access to web component
+    if(modalRef.current) {
+      modalRef.current.open = true;
+    }
+  }
+  
+  const closeModal = () => {
+    if (modalRef.current) {
+      modalRef.current.open = false;
+    }
+  }
+
+  const saveChanges = () => {
+    // Perform any save logic
+    alert("Mock up of saving changes...")
+    closeModal();
+  }
 
   return (
     <div className='main-content'>
@@ -132,6 +165,29 @@ const BasicForm = () => {
             dismissible
           />
         )}
+
+        {/* MODAL SHOWCASE */}
+        <NysButtonComponent label="Show Modal" onNysClick={openModal} variant="outline"></NysButtonComponent>
+        <NysModalComponent ref={modalRef} id="myModal" heading="Submission Success!">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incidid
+          </p>
+          <div slot="actions">
+            <NysButtonComponent
+              label="Cancel"
+              variant="outline"
+              onNysClick={closeModal}
+            ></NysButtonComponent>
+            <NysButtonComponent label="Confirm" onNysClick={saveChanges}></NysButtonComponent>
+          </div>
+        </NysModalComponent>
     </div>
   );
 };

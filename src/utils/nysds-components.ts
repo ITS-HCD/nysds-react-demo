@@ -14,6 +14,7 @@ import {
   NysGlobalFooter,
   NysGlobalHeader,
   NysIcon,
+  NysModal,
   NysOption,
   NysRadiobutton,
   NysRadiogroup,
@@ -126,6 +127,12 @@ export const NysIconComponent = createComponent({
   react: React,
   tagName: "nys-icon",
   elementClass: NysIcon,
+});
+
+export const NysModalComponent = createComponent({
+  react: React,
+  tagName: "nys-modal",
+  elementClass: NysModal,
 });
 
 export const NysOptionComponent = createComponent({
