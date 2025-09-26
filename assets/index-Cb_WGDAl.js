@@ -3201,29 +3201,30 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     /* Global Modal Styles */
     --_nys-modal-width: 480px;
     --_nys-modal-min-width: 320px;
-    --_nys-modal-radius: var(--nys-radius-lg, 8px);
-    --_nys-modal-border: 1px solid var(--nys-color-neutral-200, #bec0c1);
+    --_nys-modal-border-radius: var(--nys-radius-lg, 8px);
+    --_nys-modal-border-color: var(--nys-color-neutral-200, #bec0c1);
+    --_nys-modal-border-width: 1px;
     --_nys-modal-background: var(--nys-color-surface, #fff);
 
     /* Modal Overlay */
-    --_nys-modal-overlay-background: var(
+    --_nys-modal-background-color--overlay: var(
       --nys-color-black-transparent-700,
       rgba(27, 27, 27, 0.7)
     );
 
     /* Modal Header */
-    --_nys-modal-header-gap: var(--nys-space-150, 12px);
-    --_nys-modal-header-padding: var(--nys-space-300, 24px);
+    --_nys-modal-gap--header: var(--nys-space-150, 12px);
+    --_nys-modal-padding--header: var(--nys-space-300, 24px);
 
     /* Modal Body */
-    --_nys-modal-body-padding: var(--nys-space-100, 8px)
+    --_nys-modal-padding--body: var(--nys-space-100, 8px)
       var(--nys-space-300, 24px) var(--nys-space-300, 24px);
 
     /* Modal Footer */
-    --_nys-modal-footer-padding: var(--nys-space-200, 16px)
+    --_nys-modal-padding--footer: var(--nys-space-200, 16px)
       var(--nys-space-300, 24px) var(--nys-space-300, 24px)
       var(--nys-space-300, 24px);
-    --_nys-modal-footer-gap: var(--nys-space-250, 20px);
+    --_nys-modal-gap--footer: var(--nys-space-250, 20px);
 
     /* Typography */
     --_nys-modal-font-size: var(--nys-font-size-ui-md, 16px);
@@ -3268,7 +3269,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    background: var(--_nys-modal-overlay-background);
+    background: var(--_nys-modal-background-color--overlay);
   }
 
   /*** Base ***/
@@ -3278,8 +3279,8 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     margin: 20px;
     width: var(--_nys-modal-width);
     min-width: var(--_nys-modal-min-width);
-    border-radius: var(--_nys-modal-radius);
-    border: var(--_nys-modal-border);
+    border-radius: var(--_nys-modal-border-radius);
+    border: var(--_nys-modal-border-width) solid var(--_nys-modal-border-color);
     font-family: var(--_nys-modal-font-family);
     font-size: var(--_nys-modal-font-size);
     font-weight: var(--_nys-modal-font-weight);
@@ -3292,10 +3293,10 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   /*** Modal Header ***/
   .nys-modal_header {
     display: flex;
-    padding: var(--_nys-modal-header-padding);
+    padding: var(--_nys-modal-padding--header);
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--_nys-modal-header-gap);
+    gap: var(--_nys-modal-gap--header);
   }
 
   .nys-modal_header-inner {
@@ -3307,7 +3308,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   /*** Modal Body ***/
   .nys-modal_body {
     display: flex;
-    padding: var(--_nys-modal-body-padding);
+    padding: var(--_nys-modal-padding--body);
     flex-direction: column;
     align-items: flex-start;
   }
@@ -3344,9 +3345,9 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   .nys-modal_footer ::slotted(*) {
     display: flex;
     flex-direction: column-reverse;
-    padding: var(--_nys-modal-footer-padding);
+    padding: var(--_nys-modal-padding--footer);
     justify-content: center;
-    gap: var(--_nys-modal-footer-gap);
+    gap: var(--_nys-modal-gap--footer);
     align-self: stretch;
   }
 
@@ -3364,7 +3365,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
       align-items: center;
     }
   }
-`;var Cf=Object.defineProperty,xf=Object.getOwnPropertyDescriptor,ur=(l,r,o,s)=>{for(var c=s>1?void 0:s?xf(r,o):r,d=l.length-1,h;d>=0;d--)(h=l[d])&&(c=(s?h(r,o,c):h(c))||c);return s&&c&&Cf(r,o,c),c};let wf=0;var no;const Sa=(no=class extends Le{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(l){this._width=no.VALID_WIDTHS.includes(l)?l:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${wf++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",l=>this._handleKeydown(l))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",l=>this._handleKeydown(l))}firstUpdated(){this._handleBodySlotChange(),this._handleActionSlotChange()}async updated(l){l.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){document.body.style.overflow=this.open?"hidden":""}_restoreBodyScroll(){document.body.style.overflow=""}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector(".nys-modal");r==null||r.focus()}async _restorePrevFocused(){var l;const r=this._prevFocusedElement;if(r&&r.tagName.toLowerCase()==="nys-button"){const o=await r.getButtonElement();if(o){o.focus();return}}else(l=this._prevFocusedElement)==null||l.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector("slot");r&&(this.hasBodySlots=r.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}))}async _handleActionSlotChange(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector('slot[name="actions"]');r&&(this.hasActionSlots=r.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}),this._actionButtonSlot=r,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const l=window.innerWidth<=400;this._actionButtonSlot.assignedElements().forEach(r=>{r.querySelectorAll("nys-button").forEach(o=>{l?o==null||o.setAttribute("fullWidth",""):o==null||o.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const l=[];return this.subheading&&l.push(`${this.id}-subheading`),this.hasBodySlots&&l.push(`${this.id}-desc`),l.join(" ")}_updateDismissAria(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector("nys-button");r&&(r.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{r.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(l){var r;if(this.open&&(l.key==="Escape"&&!this.mandatory&&(l.preventDefault(),this._closeModal()),l.key==="Tab")){const o=(r=this.shadowRoot)==null?void 0:r.querySelector(".nys-modal");if(!o)return;const s='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',c=[],d=o.querySelector("nys-button");d&&c.push(d);const h=Array.from(o.querySelectorAll("slot"));for(const g of h){const y=g.assignedElements({flatten:!0});for(const p of y)p instanceof HTMLElement&&p.matches(s)&&c.push(p),p.querySelectorAll("nys-button").forEach(_=>{c.push(_)})}if(c.length>0){const g=c[0],y=c[c.length-1];let p=document.activeElement,_=c.indexOf(p);if(l.shiftKey){l.preventDefault();let w=_-1;w<0&&(w=c.length-1);const E=c[w];if(c[w].tagName.toLowerCase()==="nys-button"){const L=await E.getButtonElement();L==null||L.focus()}else E.focus()}else if(p===y)if(l.preventDefault(),g.tagName.toLowerCase()==="nys-button"){const w=await g.getButtonElement();w==null||w.focus()}else g.focus()}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?Y`<div
+`;var Cf=Object.defineProperty,xf=Object.getOwnPropertyDescriptor,ur=(l,r,o,s)=>{for(var c=s>1?void 0:s?xf(r,o):r,d=l.length-1,h;d>=0;d--)(h=l[d])&&(c=(s?h(r,o,c):h(c))||c);return s&&c&&Cf(r,o,c),c};let wf=0;var no;const Sa=(no=class extends Le{constructor(){super(),this.id="",this.heading="",this.subheading="",this.open=!1,this.mandatory=!1,this._width="md",this._actionButtonSlot=null,this._prevFocusedElement=null,this._originalBodyOverflow=null,this.hasBodySlots=!1,this.hasActionSlots=!1}get width(){return this._width}set width(l){this._width=no.VALID_WIDTHS.includes(l)?l:"md"}connectedCallback(){super.connectedCallback(),this.id||(this.id=`nys-{{componentName}}-${Date.now()}-${wf++}`),window.addEventListener("resize",()=>this._updateSlottedButtonWidth()),window.addEventListener("keydown",l=>this._handleKeydown(l))}disconnectedCallback(){super.disconnectedCallback(),this._restoreBodyScroll(),window.removeEventListener("keydown",l=>this._handleKeydown(l))}firstUpdated(){this._handleBodySlotChange(),this._handleActionSlotChange()}async updated(l){l.has("open")&&(this.open?(this._hideBodyScroll(),this._dispatchOpenEvent(),await this.updateComplete,this._savePrevFocused(),this._focusOnModal(),this._updateDismissAria()):(this._restorePrevFocused(),this._restoreBodyScroll(),this._dispatchCloseEvent(),this._updateDismissAria()))}_hideBodyScroll(){this._originalBodyOverflow===null&&(this._originalBodyOverflow=document.body.style.overflow),document.body.style.overflow="hidden"}_restoreBodyScroll(){this._originalBodyOverflow!==null&&(document.body.style.overflow=this._originalBodyOverflow,this._originalBodyOverflow=null)}_savePrevFocused(){this._prevFocusedElement=document.activeElement}_focusOnModal(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector(".nys-modal");r==null||r.focus()}async _restorePrevFocused(){var l;const r=this._prevFocusedElement;if(r&&r.tagName.toLowerCase()==="nys-button"){const o=await r.getButtonElement();if(o){o.focus();return}}else(l=this._prevFocusedElement)==null||l.focus();this._prevFocusedElement=null}async _handleBodySlotChange(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector("slot");r&&(this.hasBodySlots=r.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}))}async _handleActionSlotChange(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector('slot[name="actions"]');r&&(this.hasActionSlots=r.assignedNodes({flatten:!0}).some(o=>{var s;return o.nodeType===Node.ELEMENT_NODE||((s=o.textContent)==null?void 0:s.trim())}),this._actionButtonSlot=r,this._updateSlottedButtonWidth())}_updateSlottedButtonWidth(){if(!this._actionButtonSlot)return;const l=window.innerWidth<=400;this._actionButtonSlot.assignedElements().forEach(r=>{r.querySelectorAll("nys-button").forEach(o=>{l?o==null||o.setAttribute("fullWidth",""):o==null||o.removeAttribute("fullWidth")})})}_dispatchOpenEvent(){this.dispatchEvent(new CustomEvent("nys-open",{detail:{id:this.id},bubbles:!0,composed:!0}))}_dispatchCloseEvent(){this.dispatchEvent(new CustomEvent("nys-close",{detail:{id:this.id},bubbles:!0,composed:!0}))}_getAriaDescribedBy(){const l=[];return this.subheading&&l.push(`${this.id}-subheading`),this.hasBodySlots&&l.push(`${this.id}-desc`),l.join(" ")}_updateDismissAria(){var l;const r=(l=this.shadowRoot)==null?void 0:l.querySelector("nys-button");r&&(r.setAttribute("ariaLabel"," "),this.open&&setTimeout(()=>{r.setAttribute("ariaLabel","Close this window")},100))}async _handleKeydown(l){var r;if(this.open&&(l.key==="Escape"&&!this.mandatory&&(l.preventDefault(),this._closeModal()),l.key==="Tab")){const o=(r=this.shadowRoot)==null?void 0:r.querySelector(".nys-modal");if(!o)return;const s='a[href], area[href], button:not([disabled]), details, iframe, object, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [contentEditable="true"], [tabindex]:not([tabindex^="-"])',c=[],d=o.querySelector("nys-button");d&&c.push(d);const h=Array.from(o.querySelectorAll("slot"));for(const g of h){const y=g.assignedElements({flatten:!0});for(const p of y)p instanceof HTMLElement&&p.matches(s)&&c.push(p),p.querySelectorAll("nys-button").forEach(_=>{c.push(_)})}if(c.length>0){const g=c[0],y=c[c.length-1];let p=document.activeElement,_=c.indexOf(p);if(l.shiftKey){l.preventDefault();let w=_-1;w<0&&(w=c.length-1);const E=c[w];if(c[w].tagName.toLowerCase()==="nys-button"){const L=await E.getButtonElement();L==null||L.focus()}else E.focus()}else if(p===y)if(l.preventDefault(),g.tagName.toLowerCase()==="nys-button"){const w=await g.getButtonElement();w==null||w.focus()}else g.focus()}}}_closeModal(){this.open=!1,this._dispatchCloseEvent()}render(){return this.open?Y`<div
           id=${this.id}
           class="nys-modal-overlay"
           role="dialog"
