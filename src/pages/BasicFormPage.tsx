@@ -62,7 +62,7 @@ const BasicForm = () => {
 
   const saveChanges = () => {
     // Perform any save logic
-    alert("Mock up of saving changes...")
+    alert("*Slaps face* >:[ \n WE WILL ASK THE QUESTIONS!!  \n \n (The Office: Season 5, Episode 19) ")
     closeModal();
   }
 
@@ -167,25 +167,15 @@ const BasicForm = () => {
         )}
 
         {/* MODAL SHOWCASE */}
-        <NysButtonComponent label="Show Modal" onNysClick={openModal} variant="outline"></NysButtonComponent>
-        <NysModalComponent ref={modalRef} id="myModal" heading="Submission Success!">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incidid
-          </p>
+        <NysButtonComponent label="Knock Knock (Show Modal)" onNysClick={openModal} variant="outline"></NysButtonComponent>
+        <NysModalComponent ref={modalRef} id="myModal" heading="Who's there?" subheading='KGB...'>
           <div slot="actions">
             <NysButtonComponent
-              label="Cancel"
+              label="Don't answer"
               variant="outline"
               onNysClick={closeModal}
             ></NysButtonComponent>
-            <NysButtonComponent label="Confirm" onNysClick={saveChanges}></NysButtonComponent>
+            <NysButtonComponent label="KGB who?" onNysClick={saveChanges}></NysButtonComponent>
           </div>
         </NysModalComponent>
     </div>
