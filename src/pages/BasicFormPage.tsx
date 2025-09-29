@@ -77,6 +77,23 @@ const BasicForm = () => {
           primaryAction="https://designsystem.ny.gov/"
           dismissible
         />
+        <NysAlertComponent 
+          type="danger"
+          heading="TESTING LTR"
+          text="We make use of form-related NYSDS components in the native HTML form below."
+          primaryLabel="Learn more on NYSDS reference site"
+          primaryAction="https://designsystem.ny.gov/"
+          dismissible
+        >
+          <p dir="rtl">This paragraph is in English but incorrectly goes right to left.</p>
+          <p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+          <hr />
+          <p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+          <p dir="auto">
+            هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+          </p>
+          
+        </NysAlertComponent>
 
         <form
           id="myForm"
