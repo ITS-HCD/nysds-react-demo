@@ -4,8 +4,8 @@ This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.g
 ## Getting Started
 > [!NOTE]
 > This repo contains two key branches:
-> - main — A simple introduction demonstrating how the NYS Design System works.
-> - multipages — A more realistic multi-page setup (still under construction, so some components may be broken). Refer to the multipages branch for more context and implementation details.
+> - main — A more realistic multi-page setup. Refer to the main branch for more context and implementation details.
+> - intro/single-form — A simple introduction demonstrating how the NYS Design System works. Good for beginners.
 > 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
