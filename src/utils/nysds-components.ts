@@ -7,14 +7,16 @@ import {
   NysAlert,
   NysAvatar,
   NysBacktotop,
-  NysBadge,
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
+  NysDivider,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
   NysIcon,
+  NysModal,
+  NysPagination,
   NysOption,
   NysRadiobutton,
   NysRadiogroup,
@@ -71,13 +73,7 @@ export const NysBacktotopComponent = createComponent({
     onNysClick: "nys-click",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },  
-});
-
-export const NysBadgeComponent = createComponent({
-  react: React,
-  tagName: "nys-badge",
-  elementClass: NysBadge,
+  },
 });
 
 export const NysButtonComponent = createComponent({
@@ -88,7 +84,7 @@ export const NysButtonComponent = createComponent({
     onNysClick: "nys-click",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },  
+  },
 });
 
 export const NysCheckboxComponent = createComponent({
@@ -99,7 +95,7 @@ export const NysCheckboxComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysCheckboxgroupComponent = createComponent({
@@ -108,13 +104,19 @@ export const NysCheckboxgroupComponent = createComponent({
   elementClass: NysCheckboxgroup,
 });
 
+export const NysDividerComponent = createComponent({
+  react: React,
+  tagName: "nys-divider",
+  elementClass: NysDivider,
+});
+
 export const NysFileinputComponent = createComponent({
   react: React,
   tagName: "nys-fileinput",
   elementClass: NysFileinput,
   events: {
-    onNysFileChange : "nys-change"
-  }
+    onNysFileChange: "nys-change",
+  },
 });
 
 export const NysGlobalFooterComponent = createComponent({
@@ -135,6 +137,25 @@ export const NysIconComponent = createComponent({
   elementClass: NysIcon,
 });
 
+export const NysModalComponent = createComponent({
+  react: React,
+  tagName: "nys-modal",
+  elementClass: NysModal,
+  events: {
+    onNysOpen: "nys-open",
+    onNysClose: "nys-close",
+  },
+});
+
+export const NysPaginationComponent = createComponent({
+  react: React,
+  tagName: "nys-pagination",
+  elementClass: NysPagination,
+  events: {
+    onNysChange: "nys-change",
+  },
+});
+
 export const NysOptionComponent = createComponent({
   react: React,
   tagName: "nys-option",
@@ -149,7 +170,7 @@ export const NysRadiobuttonComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysRadioGroupComponent = createComponent({
@@ -166,7 +187,7 @@ export const NysSelectComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysSkipnavComponent = createComponent({
@@ -210,7 +231,7 @@ export const NysTextareaComponent = createComponent({
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
     onNysSelect: "nys-select",
-  },    
+  },
 });
 
 export const NysToggleComponent = createComponent({
@@ -221,7 +242,7 @@ export const NysToggleComponent = createComponent({
     onNysChange: "nys-change",
     onNysFocus: "nys-focus",
     onNysBlur: "nys-blur",
-  },    
+  },
 });
 
 export const NysTooltipComponent = createComponent({
