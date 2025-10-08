@@ -1,5 +1,5 @@
 # React Demo to showcase NYSDS usage
-This demo shows how to use NYS Design System (NYSDS) components in a React project. Follow the steps below to see a basic setup and usage pattern.
+This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.gov/) components in a React project. Follow the steps below to see a basic setup and usage pattern.
 
 ## Getting Started
 > [!NOTE]
