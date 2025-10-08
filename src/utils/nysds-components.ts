@@ -10,11 +10,13 @@ import {
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
+  NysDivider,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
   NysIcon,
   NysModal,
+  NysPagination,
   NysOption,
   NysRadiobutton,
   NysRadiogroup,
@@ -102,6 +104,12 @@ export const NysCheckboxgroupComponent = createComponent({
   elementClass: NysCheckboxgroup,
 });
 
+export const NysDividerComponent = createComponent({
+  react: React,
+  tagName: "nys-divider",
+  elementClass: NysDivider,
+});
+
 export const NysFileinputComponent = createComponent({
   react: React,
   tagName: "nys-fileinput",
@@ -133,6 +141,19 @@ export const NysModalComponent = createComponent({
   react: React,
   tagName: "nys-modal",
   elementClass: NysModal,
+  events: {
+    onNysOpen: "nys-open",
+    onNysClose: "nys-close",
+  },
+});
+
+export const NysPaginationComponent = createComponent({
+  react: React,
+  tagName: "nys-pagination",
+  elementClass: NysPagination,
+  events: {
+    onNysChange: "nys-change",
+  },
 });
 
 export const NysOptionComponent = createComponent({
