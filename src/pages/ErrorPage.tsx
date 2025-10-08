@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   NysSkipnavComponent,
   NysGlobalHeaderComponent,
@@ -6,10 +6,9 @@ import {
   NysUnavFooterComponent,
   NysUnavHeaderComponent,
   NysBacktotopComponent,
-} from "./utils/nysds-components";
-import "./styles/App.css";
+} from "../utils/nysds-components";
 
-function App() {
+const ErrorPage = () => {
   return (
     <>
       <NysSkipnavComponent />
@@ -17,7 +16,7 @@ function App() {
       <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
-        homepageLink="/nysds-react-demo"
+        homepageLink="/"
       >
         <ul>
           <li>
@@ -34,9 +33,13 @@ function App() {
           </li>
         </ul>
       </NysGlobalHeaderComponent>
-      <main className="nys-flex-1 nys-display-flex nys-flex-column">
-        <Outlet />
-      </main>
+      <div className="main-content nys-flex-1 nys-display-flex nys-flex-column nys-flex-align-center">
+        <h1>Oh no, this route doesn't exist!</h1>
+        <img src="error-image.png" alt="" role="presentation" />
+        <Link to="/" className="centered-link">
+          You can go back to the home page by clicking here, though!
+        </Link>
+      </div>
       <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
         <ul>
           <li>
@@ -51,6 +54,6 @@ function App() {
       <NysBacktotopComponent />
     </>
   );
-}
+};
 
-export default App;
+export default ErrorPage;

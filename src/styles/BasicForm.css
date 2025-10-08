@@ -1,0 +1,8 @@
+/* Form layout styling */
+.nys-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
