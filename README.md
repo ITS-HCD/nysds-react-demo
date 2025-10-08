@@ -4,8 +4,8 @@ This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.g
 ## Getting Started
 > [!NOTE]
 > This repo contains two key branches:
-> - main — A more realistic multi-page setup. Refer to the main branch for more context and implementation details.
-> - intro/single-form — A simple introduction demonstrating how the NYS Design System works. Good for beginners.
+> - main — A full-featured, multi-page demo showcasing realistic React app structure and NYS Design System integration.
+> - intro/single-page — A simplified, single-page example for beginners exploring how to get started with NYS Design System in React.
 > 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
