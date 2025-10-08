@@ -13,10 +13,34 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.hidden {
-  display: none;
+.button-container {
+  margin-left: 2rem;
+}
+
+.main-content.stepper-content {
+  margin-bottom: 1rem;
+}
+
+.main-content.stepper-content h1 {
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .stepper-content.button-container {
+    margin: 0 10rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content.stepper-content {
+    margin-left: 3rem;
+  }
+
+  .stepper-content.button-container {
+    align-self: flex-start;
+    margin-left: 3rem;
+  }
 }

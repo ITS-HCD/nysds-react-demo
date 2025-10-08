@@ -140,7 +140,7 @@ const StepperPage = () => {
           <SamplePage3 />
         </div>
 
-        <div className="button-container nys-display-flex">
+        <div className="stepper-content button-container nys-display-flex">
           {selectStep > 1 && (
             <NysButtonComponent
               type="button"
