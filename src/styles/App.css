@@ -1,0 +1,32 @@
+/**
+* This is the main styling being applied across all pages.
+**/
+
+/* Root container for full height layout */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global styles */
+
+/* Main layout and content */
+h1 {
+  text-align: center;
+}
+
+.main-content {
+  margin: 5rem 2rem;
+  gap: 15px;
+}
+
+.main-content.stepper-content {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    margin: 5rem 10rem;
+  }
+}
