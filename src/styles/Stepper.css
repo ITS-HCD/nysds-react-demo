@@ -3,28 +3,25 @@
  * I am manually adding the gap here 
  */
 .button-container {
-    gap: 10px; 
-    justify-content: space-between;
-    margin-bottom: 25px;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-left: 2rem;
 }
 
 /* Stepper.css */
 .stepper-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.button-container {
-  margin-left: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content.stepper-content {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .main-content.stepper-content h1 {
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -32,11 +29,15 @@
     margin: 0 10rem;
     margin-bottom: 3rem;
   }
+  .main-content.stepper-content h1 {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .main-content.stepper-content {
     margin-left: 3rem;
+    margin-top: 2rem;
   }
 
   .stepper-content.button-container {

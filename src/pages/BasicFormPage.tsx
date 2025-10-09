@@ -71,9 +71,9 @@ const BasicForm = () => {
         <h1 className='appTitle'>Vite + React + NYSDS</h1>
         <NysAlertComponent 
           type="info"
-          heading="NYSDS Components"
-          text="We make use of form-related NYSDS components in the native HTML form below."
-          primaryLabel="Learn more on NYSDS reference site"
+          heading="Using NYSDS Components in Forms"
+          text="The form below shows how NYSDS form components can be used inside a standard HTML form. Each of our web components work with normal form submission and validation, allowing you to collect and process data through formData just like native controls."
+          primaryLabel="Learn more about NYSDS on our reference site"
           primaryAction="https://designsystem.ny.gov/"
           dismissible
         />
