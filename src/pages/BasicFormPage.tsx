@@ -2,7 +2,7 @@ import { FormEvent, useState, useRef } from 'react';
 import '../styles/App.css';
 import '../styles/BasicForm.css';
 // Add any new imports from the nysds-components.ts file below 
-import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysModalComponent, NysOptionComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
 import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
 
 const BasicForm = () => {
@@ -84,26 +84,30 @@ const BasicForm = () => {
           method="POST"
           onSubmit={handleSubmit}
         >       
-          <NysTextInputComponent name='fullName' label="Full name" required 
+          <NysTextInputComponent id="my-textinput" name='fullName' label="Full name" description='Enter your full legal name'required 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
             }}
             />
+          <NysTooltipComponent for="my-textinput" text="I am a tooltip!"></NysTooltipComponent>
+
           <NysTextInputComponent name='email' label="Email" type="email" required/>
-          <NysTextareaComponent name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
-          
+          <NysTextareaComponent id="my-textarea" name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
+
           {/* Note: when wrapping components within a component, you will need a closing tag (e.g. select, radiogroup, checkboxgroup, slot wrappings for inner HTML elements) */}
           <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
-            <NysOptionComponent value="government_updates" label="Government Updates" />
-            <NysOptionComponent value="community_events" label="Community Events" />
-            <NysOptionComponent value="public_services" label="Public Services & Resources" />
-            <NysOptionComponent value="transportation_news" label="Transportation & Infrastructure" />
-            <NysOptionComponent value="environment" label="Environment & Sustainability" />      
+            {/* <option value="">--Please choose an option--</option> */}
+            <option value="government_updates" label="Government Updates" />
+            <option value="community_events" label="Community Events" />
+            <option value="public_services" label="Public Services & Resources" />
+            <option value="transportation_news" label="Transportation & Infrastructure" />
+            <option value="environment" label="Environment & Sustainability" />      
           </NysSelectComponent>
 
-          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
+          <NysFileinputComponent id="my-fileinput" name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
 
           <NysRadioGroupComponent
+            id="my-radiogroup"
             label="How often do you want updates?"
             description="These updates will be sent directly to your email."
             size="md"
@@ -124,13 +128,15 @@ const BasicForm = () => {
           <NysCheckboxComponent
             label="Subscribe to NYS Government Updates"
             description="Get notified via email about important updates and services."
-            id="subscribe-checkbox-disabled-checked"
+            id="subscription"
             name="subscribe"
             value="email-updates"
             required
           />
 
+
           <NysCheckboxgroupComponent
+            id="my-checkboxgroup"
             label="Select your favorite New York landmarks"
             description="Choose from the options below"
             required
@@ -148,13 +154,11 @@ const BasicForm = () => {
             value="dark_mode_on"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
           </NysToggleComponent>
 
-          <NysTooltipComponent text="Hello" position="bottom">
-            <NysButtonComponent
-              type="submit"
-              fullWidth
-              label="Subscribe"
-            />
-          </NysTooltipComponent>
+          <NysButtonComponent
+            type="submit"
+            fullWidth
+            label="Subscribe"
+          />
         </form>
         <br></br>
         {submittedData && (

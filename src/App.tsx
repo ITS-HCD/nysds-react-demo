@@ -14,7 +14,7 @@ function App() {
     <>
       <NysSkipnavComponent />
       <NysUnavHeaderComponent />
-      <NysGlobalHeaderComponent
+      {/* <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
         homepageLink="/nysds-react-demo"
@@ -29,6 +29,26 @@ function App() {
               <li><a href="/nysds-react-demo/#/basic-form">Basic Form</a></li>
               <li><a href="/nysds-react-demo/#/stepper">Stepper</a></li>
             </ul>
+          </li>
+          <li>
+            <a href="/nysds-react-demo/#/about">About</a>
+          </li>
+        </ul>
+      </NysGlobalHeaderComponent> */}
+      <NysGlobalHeaderComponent
+        appName="React Demo Form"
+        agencyName="Office of Information Technology Services"
+        homepageLink="/"
+      >
+        <ul>
+          <li>
+            <a href="/nysds-react-demo">Home</a>
+          </li>
+          <li>
+            <a href="/nysds-react-demo/#/basic-form">Basic Form</a>
+          </li>
+          <li>
+            <a href="/nysds-react-demo/#/stepper">Stepper</a>
           </li>
           <li>
             <a href="/nysds-react-demo/#/about">About</a>

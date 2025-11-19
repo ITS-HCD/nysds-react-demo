@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Outlet } from "react-router-dom";
 import SamplePage1 from "./SamplePage1";
 import SamplePage2 from "./SamplePage2";
 import SamplePage3 from "./SamplePage3";

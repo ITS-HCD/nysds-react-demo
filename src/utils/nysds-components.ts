@@ -17,7 +17,6 @@ import {
   NysIcon,
   NysModal,
   NysPagination,
-  NysOption,
   NysRadiobutton,
   NysRadiogroup,
   NysSelect,
@@ -154,12 +153,6 @@ export const NysPaginationComponent = createComponent({
   events: {
     onNysChange: "nys-change",
   },
-});
-
-export const NysOptionComponent = createComponent({
-  react: React,
-  tagName: "nys-option",
-  elementClass: NysOption,
 });
 
 export const NysRadiobuttonComponent = createComponent({
