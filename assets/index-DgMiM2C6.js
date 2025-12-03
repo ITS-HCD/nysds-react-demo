@@ -251,7 +251,6 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
               value=${we(this.value?this.value:void 0)}
               type=${this.type}
               aria-controls=${we(this.ariaControls||void 0)}
-              aria-description=${we(this.ariaDescription||void 0)}
               @click=${this._handleClick}
               @focus="${this._handleFocus}"
               @blur="${this._handleBlur}"
