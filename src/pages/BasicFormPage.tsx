@@ -2,7 +2,7 @@ import { FormEvent, useState, useRef } from 'react';
 import '../styles/App.css';
 import '../styles/BasicForm.css';
 // Add any new imports from the nysds-components.ts file below 
-import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
+import { NysIconComponent, NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysDatepickerComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
 import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
 
 const BasicForm = () => {
@@ -84,18 +84,18 @@ const BasicForm = () => {
           method="POST"
           onSubmit={handleSubmit}
         >       
-          <NysTextInputComponent id="my-textinput" name='fullName' label="Full name" description='Enter your full legal name'required 
+          <NysDatepickerComponent required id="datepicker1" name="datepicker1" type="date" label="Date of birth" description="Enter in MM/DD/YYYY format" />
+          <NysTooltipComponent for="my-textinput" text="I am a tooltip, used for hints."></NysTooltipComponent>
+          <NysTextInputComponent id="my-textinput" name='fullName' label="Full name" description='Enter your full legal name' 
             onNysBlur={(e) => {
               console.log('nys-blur event received 🔥', e);
             }}
             />
-          <NysTooltipComponent for="my-textinput" text="I am a tooltip!"></NysTooltipComponent>
-
-          <NysTextInputComponent name='email' label="Email" type="email" required/>
-          <NysTextareaComponent id="my-textarea" name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
+          <NysTextInputComponent name='email' label="Email" type="email" />
+          <NysTextareaComponent id="my-textarea" name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." />
 
           {/* Note: when wrapping components within a component, you will need a closing tag (e.g. select, radiogroup, checkboxgroup, slot wrappings for inner HTML elements) */}
-          <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
+          <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" >
             {/* <option value="">--Please choose an option--</option> */}
             <option value="government_updates" label="Government Updates" />
             <option value="community_events" label="Community Events" />
@@ -104,14 +104,14 @@ const BasicForm = () => {
             <option value="environment" label="Environment & Sustainability" />      
           </NysSelectComponent>
 
-          <NysFileinputComponent id="my-fileinput" name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
+          <NysFileinputComponent id="my-fileinput" name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone />
 
           <NysRadioGroupComponent
             id="my-radiogroup"
             label="How often do you want updates?"
             description="These updates will be sent directly to your email."
             size="md"
-            required
+            
           >
             <NysRadiobuttonComponent
               name="frequency"
@@ -128,10 +128,10 @@ const BasicForm = () => {
           <NysCheckboxComponent
             label="Subscribe to NYS Government Updates"
             description="Get notified via email about important updates and services."
-            id="subscription"
+            id="subscribe-checkbox-disabled-checked"
             name="subscribe"
             value="email-updates"
-            required
+            
           />
 
 
@@ -139,7 +139,7 @@ const BasicForm = () => {
             id="my-checkboxgroup"
             label="Select your favorite New York landmarks"
             description="Choose from the options below"
-            required
+            
           >
             <NysCheckboxComponent name="landmarks" label="Adirondacks" value="adirondacks" />
             <NysCheckboxComponent name="landmarks" value="finger-lakes" label="Finger Lakes" />
@@ -160,7 +160,8 @@ const BasicForm = () => {
             label="Subscribe"
           />
         </form>
-        <br></br>
+<br>        
+</br>
         {submittedData && (
           <NysAlertComponent
             type="success"
@@ -171,7 +172,7 @@ const BasicForm = () => {
         )}
 
         {/* MODAL SHOWCASE */}
-        <NysButtonComponent label="Knock Knock (Show Modal)" onNysClick={openModal} variant="outline"></NysButtonComponent>
+        <NysButtonComponent type="button" label="Knock Knock (Show Modal)" onNysClick={openModal} variant="outline"></NysButtonComponent>
         <NysModalComponent ref={modalRef} id="myModal" heading="Who's there?" subheading='KGB...'>
           <p>Ipsum Lorem. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
           <div slot="actions">

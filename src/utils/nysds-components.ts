@@ -11,6 +11,7 @@ import {
   NysCheckbox,
   NysCheckboxgroup,
   NysDivider,
+  NysDatepicker,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
@@ -101,6 +102,12 @@ export const NysCheckboxgroupComponent = createComponent({
   react: React,
   tagName: "nys-checkboxgroup",
   elementClass: NysCheckboxgroup,
+});
+
+export const NysDatepickerComponent = createComponent({
+  react: React,
+  tagName: "nys-datepicker",
+  elementClass: NysDatepicker,
 });
 
 export const NysDividerComponent = createComponent({
