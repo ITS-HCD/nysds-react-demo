@@ -2,7 +2,7 @@ import { FormEvent, useState, useRef } from 'react';
 import '../styles/App.css';
 import '../styles/BasicForm.css';
 // Add any new imports from the nysds-components.ts file below 
-import { NysIconComponent, NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysDatepickerComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
+import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysDatepickerComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
 import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
 
 const BasicForm = () => {
@@ -185,6 +185,7 @@ const BasicForm = () => {
           </div>
         </NysModalComponent>
     </div>
+
   );
 };
 
