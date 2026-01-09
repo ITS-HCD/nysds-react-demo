@@ -421,7 +421,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
                             fullWidth
                             variant="outline"
                             ?disabled=${this.disabled}
-                            @click=${this._handleTodayClick}
+                            @nys-click=${this._handleTodayClick}
                           ></nys-button>
                         `}
                     ${this.hideClearButton?null:Z`
@@ -431,7 +431,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
                             fullWidth
                             variant="outline"
                             ?disabled=${this.disabled}
-                            @click=${this._handleClearClick}
+                            @nys-click=${this._handleClearClick}
                           ></nys-button>
                         `}
                   </div>
