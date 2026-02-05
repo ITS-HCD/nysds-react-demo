@@ -1297,7 +1297,7 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         form=${ve(this.form||void 0)}
         @change="${this._handleChange}"
         aria-hidden="true"
-        tabindex="-1"
+        hidden
         class="sr-only"
       />
       <div
