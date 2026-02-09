@@ -24,6 +24,7 @@ import {
   NysSkipnav,
   NysStepper,
   NysStep,
+  NysTable,
   NysTextarea,
   NysTextinput,
   NysToggle,
@@ -209,6 +210,12 @@ export const NysStepComponent = createComponent({
   react: React,
   tagName: "nys-step",
   elementClass: NysStep,
+});
+
+export const NysTableComponent = createComponent({
+  react: React,
+  tagName: "nys-table",
+  elementClass: NysTable,
 });
 
 export const NysTextInputComponent = createComponent({

@@ -1,19 +1,19 @@
 import { Outlet } from "react-router-dom";
-import {
-  NysSkipnavComponent,
-  NysGlobalHeaderComponent,
-  NysGlobalFooterComponent,
-  NysUnavFooterComponent,
-  NysUnavHeaderComponent,
-  NysBacktotopComponent,
-} from "./utils/nysds-components";
+// import {
+//   NysSkipnavComponent,
+//   NysGlobalHeaderComponent,
+//   NysGlobalFooterComponent,
+//   NysUnavFooterComponent,
+//   NysUnavHeaderComponent,
+//   NysBacktotopComponent,
+// } from "./utils/nysds-components";
 import "./styles/App.css";
 
 function App() {
   return (
     <>
-      <NysSkipnavComponent />
-      <NysUnavHeaderComponent />
+      {/* <NysSkipnavComponent />
+      <NysUnavHeaderComponent /> */}
       {/* <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
@@ -35,7 +35,7 @@ function App() {
           </li>
         </ul>
       </NysGlobalHeaderComponent> */}
-      <NysGlobalHeaderComponent
+      {/* <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
         homepageLink="/"
@@ -54,11 +54,11 @@ function App() {
             <a href="/nysds-react-demo/#/about">About</a>
           </li>
         </ul>
-      </NysGlobalHeaderComponent>
+      </NysGlobalHeaderComponent> */}
       <main className="nys-flex-1 nys-display-flex nys-flex-column">
         <Outlet />
       </main>
-      <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
+      {/* <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
         <ul>
           <li>
             <a href="https://its.ny.gov">ITS Home</a>
@@ -70,7 +70,7 @@ function App() {
       </NysGlobalFooterComponent>
 
       <NysUnavFooterComponent />
-      <NysBacktotopComponent />
+      <NysBacktotopComponent /> */}
     </>
   );
 }

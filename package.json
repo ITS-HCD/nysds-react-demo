@@ -14,18 +14,15 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.7",
-    "@nysds/components": "^1.11.0",
-    "@nysds/styles": "^1.11.0",
-    "install": "^0.13.0",
+    "@nysds/styles": "^1.13.1",
+    "@nysds/components": "^1.13.1",
     "lit": "^3.2.1",
-    "npm": "^11.5.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
