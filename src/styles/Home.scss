@@ -1,0 +1,80 @@
+.centered-link {
+  display: block;
+  text-align: center;
+  font-size: var(--nys-font-size-3xl);
+  margin-top: 30px;
+}
+
+.main-content {
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--nys-color-theme-weaker);
+    width: 100vw;
+    padding: 10px 0 40px;
+    margin-top: -80px; // note to self: my weird styling hack to combat the margin of the main-content
+
+    img {
+      width: 720px;
+      /* Responsive: smaller image on mobile */
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
+    }
+  }
+
+  .card-section {
+    display: flex;
+    gap: 15px;
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 2rem;
+      border: 2.5px solid var(--nys-color-theme);
+      border-radius: 8px;
+      width: 500px;
+      width: clamp(10rem, 450px, 35rem);
+      object-fit: cover;
+      p {
+        margin: 0;
+      }
+
+      span {
+        font-weight: 600;
+        color: var(--nys-color-theme);
+      }
+
+      .svg-img {
+        width: 150px;
+      }
+
+      .centered-link {
+        @media screen and (max-width: 768px) {
+          font-size: var(--nys-font-size-2xl);
+        }
+      }
+
+      img {
+        width: 60px;
+      }
+
+      &.card--link {
+        text-decoration: none;
+        cursor: pointer;
+        color: inherit;
+
+        &:hover,
+        &:focus-visible {
+          outline: 2px solid var(--nys-color-theme);
+          box-shadow: 0 3px 8px var(--nys-color-theme);
+        }
+      }
+    }
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+    }
+  }
+}

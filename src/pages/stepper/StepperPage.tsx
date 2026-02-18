@@ -2,7 +2,7 @@ import { useState } from "react";
 import SamplePage1 from "./SamplePage1";
 import SamplePage2 from "./SamplePage2";
 import SamplePage3 from "./SamplePage3";
-import "../../styles/Stepper.css";
+import "../../styles/Stepper.scss";
 
 import {
   NysStepperComponent,

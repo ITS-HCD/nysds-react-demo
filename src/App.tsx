@@ -7,7 +7,7 @@ import {
   NysUnavHeaderComponent,
   NysBacktotopComponent,
 } from "./utils/nysds-components";
-import "./styles/App.css";
+import "./styles/App.scss";
 
 function App() {
   return (

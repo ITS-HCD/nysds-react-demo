@@ -1,6 +1,6 @@
 import { FormEvent, useState, useRef } from 'react';
-import '../styles/App.css';
-import '../styles/BasicForm.css';
+import '../styles/App.scss';
+import '../styles/BasicForm.scss';
 // Add any new imports from the nysds-components.ts file below 
 import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysDatepickerComponent, NysDividerComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
 // import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
@@ -109,8 +109,6 @@ const BasicForm = () => {
               other
             />
           </NysRadioGroupComponent>
-
-          <NysDividerComponent />
           
           <NysCheckboxgroupComponent
             id="my-checkboxgroup"
@@ -124,6 +122,10 @@ const BasicForm = () => {
             <NysCheckboxComponent name="landmarks" value="niagara-falls" label="Niagara Falls"/>
             <NysCheckboxComponent name="landmarks" other />
           </NysCheckboxgroupComponent>
+
+          <NysDividerComponent />
+          <NysDividerComponent />
+          <NysDividerComponent />
 
           <NysTooltipComponent for="my-textinput" text="I am a tooltip, used for hints."></NysTooltipComponent>
           <NysTextInputComponent id="my-textinput" name='fullName' label="Full name" description='Enter your full legal name' 
