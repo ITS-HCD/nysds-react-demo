@@ -26,6 +26,9 @@ npm run dev
 ```
 
 ## 2. Wrapping NYSDS components 
+> [!IMPORTANT]
+> As of February 2026, the NYSDS team is working on making NYSDS installable without Lit or React wrappers. For now, please follow the steps below.
+
 NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.
 
 In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages.
