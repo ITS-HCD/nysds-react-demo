@@ -7,6 +7,7 @@ import {
 import App from "../App.tsx";
 import HomePage from "../pages/HomePage.tsx";
 import BasicFormPage from "../pages/BasicFormPage.tsx";
+// import AboutPage from "../pages/AboutPage.tsx";
 import StepperPage from "../pages/stepper/StepperPage.tsx";
 import SamplePage1 from "../pages/stepper/SamplePage1.tsx";
 import SamplePage2 from "../pages/stepper/SamplePage2.tsx";
@@ -22,6 +23,7 @@ const router = createHashRouter(
       children: [
         { index: true, element: <HomePage /> },
         { path: "basic-form", element: <BasicFormPage /> },
+        // { path: "about", element: <AboutPage /> },
         {
           path: "stepper",
           element: <StepperPage />,
