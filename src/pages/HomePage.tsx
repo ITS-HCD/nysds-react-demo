@@ -1,7 +1,33 @@
-// import { Link } from "react-router-dom";
 import "../styles/Home.scss";
+import { useEffect } from "react";
+import confetti from "canvas-confetti";
 
 const HomePage = () => {
+  // NYSDS 1 year anniversary confetti 🎉
+  useEffect(() => {
+    const duration = 1500;
+    const animationEnd = Date.now() + duration;
+
+    const interval = setInterval(() => {
+      if (Date.now() > animationEnd) {
+        clearInterval(interval);
+        return;
+      }
+
+      confetti({
+        particleCount: 100,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+          x: Math.random(),
+          // since they fall down, start a bit higher than random
+          y: Math.random() - 0.2,
+        },
+      });
+    }, 200);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="main-content nys-display-flex nys-flex-column nys-flex-align-center">
       <div className="welcome-section">
@@ -36,9 +62,7 @@ const HomePage = () => {
             </svg>
           </div>
           <p className="centered-link">
-            Please read the{" "}
-            <span>README</span>{" "}
-            of this repository for details.
+            Please read the <span>README</span> of this repository for details.
           </p>
         </a>
         <a
@@ -47,7 +71,11 @@ const HomePage = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/nysds-react-demo/one-year-anniversary.gif" alt="" role="presentation"  />
+          <img
+            src="/nysds-react-demo/one-year-anniversary.gif"
+            alt=""
+            role="presentation"
+          />
           <p className="centered-link">
             Yahoo! <span>NYSDS</span> celebrates its 1-year anniversary!!
           </p>

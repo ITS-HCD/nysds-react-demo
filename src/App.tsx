@@ -21,7 +21,7 @@ function App() {
       >
         <ul>
           <li>
-            <a href="/nysds-react-demo">Home</a>
+            <a href="/nysds-react-demo/">Home</a>
           </li>
           <li>
             <a href="/nysds-react-demo/#/basic-form">Basic Form</a>

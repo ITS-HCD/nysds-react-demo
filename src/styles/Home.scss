@@ -67,6 +67,7 @@
         text-decoration: none;
         cursor: pointer;
         color: inherit;
+        transition: .1s ease-in-out all;
 
         &:hover,
         &:focus-visible {

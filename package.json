@@ -16,6 +16,7 @@
     "@lit/react": "^1.0.7",
     "@nysds/components": "^1.13.1",
     "@nysds/styles": "^1.13.1",
+    "canvas-confetti": "^1.9.4",
     "lit": "^3.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/canvas-confetti": "^1.9.0",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
