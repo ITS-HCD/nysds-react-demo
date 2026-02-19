@@ -32,7 +32,7 @@ npm run dev
 
 NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.
 
-In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages. If you're not cloning this repo, copy the code in that file and paste it into your own `utils/nysds-components.ts`.
+In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages. If not cloning, copy the code from that file into your own `utils/nysds-components.ts`.
 
 ## 3. Using NYSDS components 
 Once wrapped, components can be imported and used like standard React components. See `App.tsx` for examples. The multipages branch also uses wrapped components in the src/pages/ directory.
