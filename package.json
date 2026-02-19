@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.7",
-    "@nysds/components": "^1.13.1",
-    "@nysds/styles": "^1.13.1",
+    "@nysds/components": "^1.14.0",
+    "@nysds/styles": "^1.14.0",
     "canvas-confetti": "^1.9.4",
     "lit": "^3.2.1",
     "react": "^19.0.0",
