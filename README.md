@@ -4,8 +4,8 @@ This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.g
 ## Getting Started
 > [!NOTE]
 > This repo contains two key branches:
-> - main — A simple introduction demonstrating how the NYS Design System works.
-> - multipages — A more realistic multi-page setup (still under construction, so some components may be broken). Refer to the multipages branch for more context and implementation details.
+> - main — A full-featured, multi-page demo showcasing realistic React app structure and NYS Design System integration.
+> - intro/single-page — A simplified, single-page example for beginners exploring how to get started with NYS Design System in React.
 > 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
@@ -27,15 +27,18 @@ npm run dev
 ```
 
 ## 2. Wrapping NYSDS components 
+> [!IMPORTANT]
+> As of February 2026, the NYSDS team is working on making NYSDS installable without Lit or React wrappers. For now, please follow the steps below.
+
 NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.
 
-In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages.
+In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages. If you're not cloning this repo, copy the code in that file and paste it into your own `utils/nysds-components.ts`.
 
 ## 3. Using NYSDS components 
 Once wrapped, components can be imported and used like standard React components. See `App.tsx` for examples. The multipages branch also uses wrapped components in the src/pages/ directory.
 
 ## 4. NYSDS style imports
-For styling, import the NYSDS CSS files in index.html. Reference them directly from the installed package location (e.g. node_modules folder).
+For styling, import the NYSDS CSS files in index.html. Reference them directly from the installed package location (e.g., node_modules folder).
 ___
 
 ## Setting up npm link (For NYSDS developers) 🛠️
