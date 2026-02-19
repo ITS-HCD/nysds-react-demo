@@ -64,11 +64,11 @@ function App() {
           
           {/* Note: when wrapping components within a component, you will need a closing tag (e.g. select, radiogroup, checkboxgroup, slot wrappings for inner HTML elements) */}
           <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
-            <NysOptionComponent value="government_updates" label="Government Updates" />
-            <NysOptionComponent value="community_events" label="Community Events" />
-            <NysOptionComponent value="public_services" label="Public Services & Resources" />
-            <NysOptionComponent value="transportation_news" label="Transportation & Infrastructure" />
-            <NysOptionComponent value="environment" label="Environment & Sustainability" />      
+            <option value="government_updates" label="Government Updates" />
+            <option value="community_events" label="Community Events" />
+            <option value="public_services" label="Public Services & Resources" />
+            <option value="transportation_news" label="Transportation & Infrastructure" />
+            <option value="environment" label="Environment & Sustainability" />      
           </NysSelectComponent>
 
           <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>

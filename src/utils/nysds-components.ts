@@ -11,19 +11,20 @@ import {
   NysCheckbox,
   NysCheckboxgroup,
   NysDivider,
+  NysDatepicker,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
   NysIcon,
   NysModal,
   NysPagination,
-  NysOption,
   NysRadiobutton,
   NysRadiogroup,
   NysSelect,
   NysSkipnav,
   NysStepper,
   NysStep,
+  NysTable,
   NysTextarea,
   NysTextinput,
   NysToggle,
@@ -104,6 +105,12 @@ export const NysCheckboxgroupComponent = createComponent({
   elementClass: NysCheckboxgroup,
 });
 
+export const NysDatepickerComponent = createComponent({
+  react: React,
+  tagName: "nys-datepicker",
+  elementClass: NysDatepicker,
+});
+
 export const NysDividerComponent = createComponent({
   react: React,
   tagName: "nys-divider",
@@ -156,12 +163,6 @@ export const NysPaginationComponent = createComponent({
   },
 });
 
-export const NysOptionComponent = createComponent({
-  react: React,
-  tagName: "nys-option",
-  elementClass: NysOption,
-});
-
 export const NysRadiobuttonComponent = createComponent({
   react: React,
   tagName: "nys-radiobutton",
@@ -209,6 +210,12 @@ export const NysStepComponent = createComponent({
   react: React,
   tagName: "nys-step",
   elementClass: NysStep,
+});
+
+export const NysTableComponent = createComponent({
+  react: React,
+  tagName: "nys-table",
+  elementClass: NysTable,
 });
 
 export const NysTextInputComponent = createComponent({
