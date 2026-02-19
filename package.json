@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@lit/react": "^1.0.7",
-    "@nysds/components": "^1.10.0",
-    "@nysds/styles": "^1.10.0",
+    "@nysds/components": "^1.14.0",
+    "@nysds/styles": "^1.14.0",
     "lit": "^3.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
