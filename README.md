@@ -17,6 +17,7 @@ cd projectName
 npm install
 npm install @nysds/components @nysds/styles
 npm install @lit/react
+npm install lit
 ```
 
 ## 1. Starting the Dev Server
