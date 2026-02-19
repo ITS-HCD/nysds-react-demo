@@ -67,7 +67,7 @@ const HomePage = () => {
         </a>
         <a
           className="card card--link"
-          href="https://nysds-test.netlify.app/updates/1.14.0-release/"
+          href="https://designsystem.ny.gov/updates/"
           target="_blank"
           rel="noreferrer"
         >
