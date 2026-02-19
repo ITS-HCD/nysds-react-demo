@@ -38,7 +38,7 @@ const HomePage = () => {
           <p className="centered-link">
             Please read the{" "}
             <span>README</span>{" "}
-            in the main repo for details on how this demo works.
+            of this repository for details.
           </p>
         </a>
         <a
@@ -49,7 +49,7 @@ const HomePage = () => {
         >
           <img src="/nysds-react-demo/one-year-anniversary.gif" alt="" role="presentation"  />
           <p className="centered-link">
-            Yahoo! The NYSDS has reach its 1 Year Anniversary!!!
+            Yahoo! <span>NYSDS</span> celebrates its 1-year anniversary!!
           </p>
         </a>
       </div>

@@ -3,14 +3,15 @@ import '../styles/App.scss';
 import '../styles/BasicForm.scss';
 // Add any new imports from the nysds-components.ts file below 
 import { NysAlertComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysDatepickerComponent, NysDividerComponent, NysFileinputComponent, NysModalComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent} from "../utils/nysds-components";
-// import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
+import { NysModal } from "@nysds/components"; // this is used to define type on the useRef()
 
 
 const BasicForm = () => {
   // State to store submitted form data
   const [submittedData, setSubmittedData] = useState<Record<string, unknown> | null>(null);
   // Makes a reference to the <nys-modal>
-  const modalRef = useRef<{ open?: boolean } | null>(null);
+  // const modalRef = useRef<{ open?: boolean } | null>(null);
+  const modalRef = useRef<NysModal>(null);
 
   /**
    * This function is meant to demonstrate the handling of form submission with NYSDS components.
