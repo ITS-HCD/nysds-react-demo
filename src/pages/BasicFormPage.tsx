@@ -7,6 +7,7 @@ import {
   NysButtonComponent,
   NysCheckboxComponent,
   NysCheckboxgroupComponent,
+  NysComboboxComponent,
   NysDatepickerComponent,
   NysDividerComponent,
   NysFileinputComponent,
@@ -112,7 +113,7 @@ const BasicForm = () => {
 
       // More confetti!
       confetti({
-        particleCount: 50,
+        particleCount: 55,
         spread: 150,
         startVelocity: 30,
         origin: {
@@ -141,6 +142,33 @@ const BasicForm = () => {
         method="POST"
         onSubmit={handleSubmit}
       >
+        <NysComboboxComponent
+          name="my-combobox"
+          label="Select your favorite fruit"
+          placeholder="Type to search..."
+          required
+        >
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="cherry">Cherry</option>
+          <option value="date">Date</option>
+          <option value="elderberry">Elderberry</option>
+          <option value="fig">Fig</option>
+          <option value="grape">Grape</option>
+          <option value="honeydew">Honeydew</option>
+          <option value="kiwi">Kiwi</option>
+          <option value="lemon">Lemon</option>
+          <option value="mango">Mango</option>
+          <option value="nectarine">Nectarine</option>
+          <option value="orange">Orange</option>
+          <option value="papaya">Papaya</option>
+          <option value="quince">Quince</option>
+          <option value="raspberry">Raspberry</option>
+          <option value="strawberry">Strawberry</option>
+          <option value="tangerine">Tangerine</option>
+          <option value="watermelon">Watermelon</option>
+        </NysComboboxComponent>
+
         <NysDatepickerComponent
           id="datepicker1"
           name="datepicker1"
@@ -148,6 +176,7 @@ const BasicForm = () => {
           label="Schedule your appointment"
           description="Enter in MM/DD/YYYY format"
         />
+
         <NysRadioGroupComponent
           id="my-radiogroup"
           label="How often do you want updates?"
@@ -214,7 +243,9 @@ const BasicForm = () => {
             console.log("nys-blur event received 🔥", e);
           }}
         />
-        <NysTextInputComponent name="email" label="Email" type="email" />
+        <NysTextInputComponent name="email" label="Email" type="email" onNysInput={(e) => {
+            console.log("nys-blur event received 🔥", e);
+          }} />
         <NysTextareaComponent
           id="my-textarea"
           name="quote"

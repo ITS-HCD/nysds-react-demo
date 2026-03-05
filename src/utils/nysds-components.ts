@@ -7,11 +7,15 @@ import {
   NysAlert,
   NysAvatar,
   NysBacktotop,
+  NysBadge,
   NysButton,
   NysCheckbox,
   NysCheckboxgroup,
+  NysCombobox,
   NysDivider,
   NysDatepicker,
+  NysDropdownMenu,
+  NysDropdownMenuItem,
   NysFileinput,
   NysGlobalFooter,
   NysGlobalHeader,
@@ -77,6 +81,12 @@ export const NysBacktotopComponent = createComponent({
   },
 });
 
+export const NysBadgeComponent = createComponent({
+  react: React,
+  tagName: "nys-badge",
+  elementClass: NysBadge,
+});
+
 export const NysButtonComponent = createComponent({
   react: React,
   tagName: "nys-button",
@@ -105,6 +115,18 @@ export const NysCheckboxgroupComponent = createComponent({
   elementClass: NysCheckboxgroup,
 });
 
+export const NysComboboxComponent = createComponent({
+  react: React,
+  tagName: "nys-combobox",
+  elementClass: NysCombobox,
+  events: {
+    onNysChange: "nys-change",
+    onNysInput: "nys-input",
+    onNysFocus: "nys-focus",
+    onNysBlur: "nys-blur",
+  },
+});
+
 export const NysDatepickerComponent = createComponent({
   react: React,
   tagName: "nys-datepicker",
@@ -115,6 +137,21 @@ export const NysDividerComponent = createComponent({
   react: React,
   tagName: "nys-divider",
   elementClass: NysDivider,
+});
+
+export const NysDropdownMenuComponent = createComponent({
+  react: React,
+  tagName: "nys-dropdownmenu",
+  elementClass: NysDropdownMenu,
+});
+
+export const NysDropdownMenuItemComponent = createComponent({
+  react: React,
+  tagName: "nys-dropdownmenuitem",
+  elementClass: NysDropdownMenuItem,
+    events: {
+    onNysClick: "nys-click",
+  },
 });
 
 export const NysFileinputComponent = createComponent({
@@ -203,7 +240,7 @@ export const NysStepperComponent = createComponent({
   elementClass: NysStepper,
   events: {
     onNysStepClick: "nys-step-click",
-  }
+  },
 });
 
 export const NysStepComponent = createComponent({

@@ -1,0 +1,26 @@
+.main-content--showcase {
+  margin: 5rem 2rem;
+  display: flex;
+  gap: 30px;
+  @media screen and (min-width: 768px) {
+    margin: 5rem 15rem;
+  }
+}
+
+code.snippet {
+  display: block;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.7;
+  white-space: pre;
+
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+
+  background-color: #1e1e2e;
+  color: #dfe2ed;
+  border: 1px solid #313244;
+
+  border-left: 3px solid #2d68c6;
+}

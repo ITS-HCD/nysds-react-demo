@@ -6,6 +6,8 @@ import {
   NysUnavFooterComponent,
   NysUnavHeaderComponent,
   NysBacktotopComponent,
+  // NysDropdownMenuComponent,
+  // NysDropdownMenuItemComponent,
 } from "./utils/nysds-components";
 import "./styles/App.scss";
 
@@ -14,6 +16,7 @@ function App() {
     <>
       <NysSkipnavComponent />
       <NysUnavHeaderComponent />
+
       <NysGlobalHeaderComponent
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
@@ -30,7 +33,7 @@ function App() {
             <a href="/nysds-react-demo/#/stepper">Stepper</a>
           </li>
           <li>
-            <a href="/nysds-react-demo/#/about">About</a>
+            <a href="/nysds-react-demo/#/showcase">Dev Playground</a>
           </li>
         </ul>
       </NysGlobalHeaderComponent>
@@ -49,7 +52,7 @@ function App() {
       </NysGlobalFooterComponent>
 
       <NysUnavFooterComponent />
-      <NysBacktotopComponent /> 
+      <NysBacktotopComponent />
     </>
   );
 }
