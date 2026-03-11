@@ -1,6 +1,6 @@
 import { 
-  NysTextInputComponent, 
-} from "../../utils/nysds-components";
+  NysTextinput, 
+} from "@nysds/components/react";
 
 const SamplePage1 = () => {
   return (
@@ -10,18 +10,18 @@ const SamplePage1 = () => {
         This is the form to enter your personal information. Fill in your name,
         address, and contact details here.
       </p>
-      <NysTextInputComponent name="fullName" label="Full Name" required />
+      <NysTextinput name="fullName" label="Full Name" required />
 
-      <NysTextInputComponent
+      <NysTextinput
         name="email"
         label="Email Address"
         type="email"
         required
       />
 
-      <NysTextInputComponent name="phone" label="Phone Number" type="tel" />
+      <NysTextinput name="phone" label="Phone Number" type="tel" />
 
-      <NysTextInputComponent name="address" label="Street Address" />
+      <NysTextinput name="address" label="Street Address" />
     </div>
   );
 };

@@ -13,9 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lit/react": "^1.0.7",
-    "@nysds/components": "^1.14.0",
-    "@nysds/styles": "^1.14.0",
+    "@nysds/components": "^1.15.0",
+    "@nysds/styles": "^1.15.0",
     "canvas-confetti": "^1.9.4",
     "lit": "^3.2.1",
     "prismjs": "^1.30.0",

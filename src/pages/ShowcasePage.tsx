@@ -1,12 +1,12 @@
 import {
-  NysGlobalHeaderComponent,
-  NysDropdownMenuComponent,
-  NysDropdownMenuItemComponent,
-  NysButtonComponent,
-  NysAvatarComponent,
-  NysAlertComponent,
-  NysDividerComponent,
-} from "../utils/nysds-components";
+  NysGlobalHeader,
+  NysDropdownMenu,
+  NysDropdownMenuItem,
+  NysButton,
+  NysAvatar,
+  NysAlert,
+  NysDivider,
+} from "@nysds/components/react";
 
 import "../styles/Showcase.scss";
 import confetti from "canvas-confetti";
@@ -37,7 +37,7 @@ const ShowcasePage = () => {
   return (
     <div className="main-content--showcase nys-display-flex nys-flex-column">
       <h1>DEV Playground & Showcase</h1>
-      <NysAlertComponent
+      <NysAlert
         type="info"
         icon="code"
         heading="DEV Playground"
@@ -69,122 +69,122 @@ const ShowcasePage = () => {
 </nys-dropdownmenu>`}
         </code>
       </p>
-      <NysGlobalHeaderComponent appName="Testing Form">
-        <NysButtonComponent
+      <NysGlobalHeader appName="Testing Form">
+        <NysButton
           id="trigger-id1"
           slot="user-actions"
           label="Settings"
           prefixIcon="slotted"
         >
-          <NysAvatarComponent
+          <NysAvatar
             slot="prefix-icon"
             initials="NY"
-          ></NysAvatarComponent>
-        </NysButtonComponent>
-      </NysGlobalHeaderComponent>
+          ></NysAvatar>
+        </NysButton>
+      </NysGlobalHeader>
 
-      <NysDropdownMenuComponent id="dropdownmenu1" for="trigger-id1">
-        <NysDropdownMenuItemComponent
+      <NysDropdownMenu id="dropdownmenu1" for="trigger-id1">
+        <NysDropdownMenuItem
           label="Profile"
           href="/profile"
           target="_blank"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Repositories & Github Pages"
           href="/repos"
           target="_blank"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Organizations"
           href="/organizations"
           target="_blank"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Sign out"
           href="/logout"
           target="_blank"
-        ></NysDropdownMenuItemComponent>
-      </NysDropdownMenuComponent>
+        ></NysDropdownMenuItem>
+      </NysDropdownMenu>
 
       {/* Trigger test 2 */}
-      <NysDividerComponent />
+      <NysDivider />
       <h2>
         Dropdown with <code>position="top-end"</code>
       </h2>
 
-      <NysGlobalHeaderComponent
+      <NysGlobalHeader
         appName="User Registration Form"
         agencyName="Office of Information Technology Services"
       >
-        <NysButtonComponent
+        <NysButton
           id="trigger-id2"
           slot="user-actions"
           label="Log out"
           prefixIcon="slotted"
         >
-          <NysAvatarComponent
+          <NysAvatar
             slot="prefix-icon"
             initials="NY"
-          ></NysAvatarComponent>
-        </NysButtonComponent>
-      </NysGlobalHeaderComponent>
+          ></NysAvatar>
+        </NysButton>
+      </NysGlobalHeader>
 
-      <NysDropdownMenuComponent
+      <NysDropdownMenu
         id="dropdownmenu2"
         for="trigger-id2"
         position="top-end"
       >
-        <NysDropdownMenuItemComponent
+        <NysDropdownMenuItem
           label="Profile"
           href="/profile"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Repositories & Github Pages"
           href="/repos"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Organizations"
           href="/organizations"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Sign out"
           href="/logout"
-        ></NysDropdownMenuItemComponent>
-      </NysDropdownMenuComponent>
+        ></NysDropdownMenuItem>
+      </NysDropdownMenu>
 
-      <NysDividerComponent />
+      <NysDivider />
 
       {/* Trigger test 3 */}
-      <NysDividerComponent />
+      <NysDivider />
       <h2>Dropdown Action Menu with Icons</h2>
-      <NysButtonComponent
+      <NysButton
         id="trigger-id3"
         label="Actions Dropdown"
-      ></NysButtonComponent>
-      <NysDropdownMenuComponent
+      ></NysButton>
+      <NysDropdownMenu
         id="dropdownmenu3"
         for="trigger-id3"
         position="bottom-end"
       >
-        <NysDropdownMenuItemComponent
+        <NysDropdownMenuItem
           label="Fire Confetti"
           prefixIcon="lock_filled"
           onNysClick={() => fireConfetti()}
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Action 2"
           prefixIcon="social_youtube"
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Disabled Action 3"
           prefixIcon="visibility"
           disabled
-        ></NysDropdownMenuItemComponent>
-        <NysDropdownMenuItemComponent
+        ></NysDropdownMenuItem>
+        <NysDropdownMenuItem
           label="Action 4"
           prefixIcon="sms"
-        ></NysDropdownMenuItemComponent>
-      </NysDropdownMenuComponent>
+        ></NysDropdownMenuItem>
+      </NysDropdownMenu>
       {/****** END TESTING ******/}
     </div>
   );

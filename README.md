@@ -16,8 +16,6 @@ npm create vite@latest projectName -- --template react-ts
 cd projectName
 npm install
 npm install @nysds/components @nysds/styles
-npm install @lit/react
-npm install lit
 ```
 
 ## 1. Starting the Dev Server
@@ -26,15 +24,25 @@ Run the following to start the local dev server:
 npm run dev
 ```
 
-## 2. Wrapping NYSDS components 
+## 2. Using NYSDS components 
 > [!IMPORTANT]
-> As of March 2026, the NYSDS team is **working to make NYSDS installable without Lit or React wrappers**. Until that update is available, please follow the steps below.
-> 
-> This approach is temporary, but for now, copy this file as needed, as it is regularly updated to support the wrapped components required to use NYSDS.
+> ~~NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.~~
+> As of March 2026, the NYSDS team depreciated the old manual wrapping of NYSDS components. NYSDS components are now available directly via `@nysds/components/react` — no manual wrapping or `@lit/react` setup required.
 
-NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.
+```tsx
+import { NysButton, NysTextinput } from "@nysds/components/react";
 
-In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages. If not cloning, copy the code from that file into your own `utils/nysds-components.ts`.
+function MyForm() {
+  return (
+    <>
+      <NysTextinput label="First name" />
+      <NysButton label="Submit" variant="filled" onNysClick={() => console.log("clicked!")} />
+    </>
+  );
+}
+```
+
+All props are typed and custom events map to `on<EventName>` React callbacks (e.g. `nys-click` → `onNysClick`).
 
 ## 3. Using NYSDS components 
 Once wrapped, components can be imported and used like standard React components. See `App.tsx` for examples. The multipages branch also uses wrapped components in the src/pages/ directory.
@@ -46,24 +54,24 @@ ___
 ## Setting up npm link (For NYSDS developers) 🛠️
 > [!Tip]
 > If you're actively developing the NYSDS Web Components and want to test local changes before publishing, you can use `npm link` to work with your local build inside this React demo project. \
-> You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS components repo and one for the React demo project.
+> You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS repo and one for the React demo.
 
 
-1. Link your local NYSDS repo \
-First, navigate to the terminal/cmd prompt tab that has your local NYSDS Web Components repo:
+1. Build and link the NYSDS repo \
+Navigate to your local NYSDS repo and run:
 ```
+npm run build:all
 npm link
 ```
 This creates a global symlink for the NYSDS package.
 
 2. Link it to this React project \
-Next, go to the terminal/cmd prompt tab that has your React demo project and run:
+In this React demo project run:
 ```
 npm link @nysds/components
 ```
 
-3. Restart the development server \
-After linking, restart the Next.js development server:
+3. Restart the dev server:
 ```
 npm run dev
 ```

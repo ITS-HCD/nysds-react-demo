@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import {
-  NysSkipnavComponent,
-  NysGlobalHeaderComponent,
-  NysGlobalFooterComponent,
-  NysUnavFooterComponent,
-  NysUnavHeaderComponent,
-  NysBacktotopComponent,
-} from "../utils/nysds-components";
+  NysSkipnav,
+  NysGlobalHeader,
+  NysGlobalFooter,
+  NysUnavFooter,
+  NysUnavHeader,
+  NysBacktotop,
+} from "@nysds/components/react";
 
 const ErrorPage = () => {
   return (
     <>
-      <NysSkipnavComponent />
-      <NysUnavHeaderComponent />
-      <NysGlobalHeaderComponent
+      <NysSkipnav />
+      <NysUnavHeader />
+      <NysGlobalHeader
         appName="React Demo Form"
         agencyName="Office of Information Technology Services"
         homepageLink="/"
@@ -32,7 +32,7 @@ const ErrorPage = () => {
             <a href="/nysds-react-demo/#/about">About</a>
           </li>
         </ul>
-      </NysGlobalHeaderComponent>
+      </NysGlobalHeader>
       <div className="main-content nys-flex-1 nys-display-flex nys-flex-column nys-flex-align-center">
         <h1>Oh no, this route doesn't exist!</h1>
         <img src="error-image.png" alt="" role="presentation" />
@@ -40,7 +40,7 @@ const ErrorPage = () => {
           You can go back to the home page by clicking here, though!
         </Link>
       </div>
-      <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
+      <NysGlobalFooter agencyName="Office of Information Technology Services">
         <ul>
           <li>
             <a href="https://its.ny.gov">ITS Home</a>
@@ -49,9 +49,9 @@ const ErrorPage = () => {
             <a href="https://its.ny.gov/about">About ITS</a>
           </li>
         </ul>
-      </NysGlobalFooterComponent>
-      <NysUnavFooterComponent />
-      <NysBacktotopComponent />
+      </NysGlobalFooter>
+      <NysUnavFooter />
+      <NysBacktotop />
     </>
   );
 };

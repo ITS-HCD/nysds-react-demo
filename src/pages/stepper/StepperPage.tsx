@@ -5,10 +5,10 @@ import SamplePage3 from "./SamplePage3";
 import "../../styles/Stepper.scss";
 
 import {
-  NysStepperComponent,
-  NysStepComponent,
-  NysButtonComponent,
-} from "../../utils/nysds-components";
+  NysStepper,
+  NysStep,
+  NysButton,
+} from "@nysds/components/react";
 
 const StepperPage = () => {
   const [selectStep, setSelectStep] = useState(1);
@@ -100,33 +100,33 @@ const StepperPage = () => {
 
   return (
     <div className="nys-flex-1 nys-grid-row">
-      <NysStepperComponent className="nys-desktop:nys-grid-col-3" label="Register for Design System Office Hours">
-        <NysStepComponent
+      <NysStepper className="nys-desktop:nys-grid-col-3" label="Register for Design System Office Hours">
+        <NysStep
           label="Sample 1"
           onClick={() => setSelectStep(1)}
           selected={selectStep === 1}
           current={maxStepReached === 1}
         />
-        <NysStepComponent
+        <NysStep
           label="Sample 2"
           onClick={() => setSelectStep(2)}
           selected={selectStep === 2}
           current={maxStepReached === 2}
         />
-        <NysStepComponent
+        <NysStep
           label="Sample 3"
           onClick={() => setSelectStep(3)}
           selected={selectStep === 3}
           current={maxStepReached === 3}
         />
         <div slot="actions">
-          <NysButtonComponent
+          <NysButton
             variant="outline"
             label="Save &amp; Exit"
             fullWidth
           />
         </div>
-      </NysStepperComponent>
+      </NysStepper>
 
       <form action="" className="stepper-form" onSubmit={handleSubmit}>
         <div className={`step-page ${selectStep === 1 ? "" : "hidden"}`}>
@@ -141,24 +141,24 @@ const StepperPage = () => {
 
         <div className="stepper-content button-container nys-display-flex">
           {selectStep > 1 && (
-            <NysButtonComponent
+            <NysButton
               type="button"
               label="Back"
               onClick={handleBack}
             />
           )}
           {selectStep < 3 ? (
-            <NysButtonComponent
+            <NysButton
               type="button"
               label="Next"
               onClick={handleNext}
             />
           ) : (
-            <NysButtonComponent
+            <NysButton
               type="submit"
               label="Submit"
               variant="outline"
-            ></NysButtonComponent>
+            ></NysButton>
           )}
         </div>
       </form>
