@@ -27,6 +27,7 @@ npm run dev
 ## 2. Using NYSDS components 
 > [!IMPORTANT]
 > ~~NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.~~
+>
 > As of March 2026, the NYSDS team depreciated the old manual wrapping of NYSDS components. NYSDS components are now available directly via `@nysds/components/react` — no manual wrapping or `@lit/react` setup required.
 
 ```tsx
