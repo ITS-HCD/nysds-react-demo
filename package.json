@@ -13,7 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nysds/components": "^1.15.0",
+    "@nysds/components": "^1.16.0-alpha-1",
     "@nysds/styles": "^1.15.0",
     "canvas-confetti": "^1.9.4",
     "lit": "^3.2.1",
