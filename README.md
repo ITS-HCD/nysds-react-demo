@@ -9,7 +9,7 @@ This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.g
 > 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
-To start a new React project with NYSDS, install the required packages with `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) covers general setup, but React integration requires using @lit/react wrappers. Below is a React + TypeScript setup:
+To start a new React project with NYSDS, install the required packages with `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) covers general setup. Below is a React + TypeScript setup:
 
 ```
 npm create vite@latest projectName -- --template react-ts
