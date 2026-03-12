@@ -10,8 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lit/react": "^1.0.7",
-    "@nysds/components": "^1.14.0",
+    "@nysds/components": "^1.16.0-alpha-1",
     "@nysds/styles": "^1.14.0",
     "lit": "^3.2.1",
     "react": "^19.0.0",

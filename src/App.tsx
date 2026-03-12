@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
 import './App.css';
 // Add any new imports from the utils/nysds-components.ts file below 
-import { NysAlertComponent, NysBacktotopComponent, NysButtonComponent, NysCheckboxComponent, NysCheckboxgroupComponent, NysFileinputComponent, NysGlobalFooterComponent, NysGlobalHeaderComponent, NysRadiobuttonComponent, NysRadioGroupComponent, NysSelectComponent, NysSkipnavComponent, NysTextInputComponent, NysTextareaComponent, NysToggleComponent, NysTooltipComponent, NysUnavFooterComponent, NysUnavHeaderComponent} from "./utils/nysds-components";
+import { NysAlert, NysBacktotop, NysButton, NysCheckbox, NysCheckboxgroup, NysFileinput, NysGlobalFooter, NysGlobalHeader, NysRadiobutton, NysRadiogroup, NysSelect, NysSkipnav, NysTextinput, NysTextarea, NysToggle, NysTooltip, NysUnavFooter, NysUnavHeader} from "@nysds/components/react";
 
 function App() {
   // State to store submitted form data
@@ -33,13 +33,13 @@ function App() {
 
   return (
     <>
-      <NysSkipnavComponent />
-      <NysUnavHeaderComponent />
-      <NysGlobalHeaderComponent appName="React Demo Form" agencyName="Office of Information Technology Services" />
+      <NysSkipnav />
+      <NysUnavHeader />
+      <NysGlobalHeader appName="React Demo Form" agencyName="Office of Information Technology Services" />
       
       <main id='main-content'>
         <h1 className='appTitle'>Vite + React + NYSDS</h1>
-        <NysAlertComponent 
+        <NysAlert 
           type="info"
           heading="NYSDS Components"
           text="We make use of form-related NYSDS components in the native HTML form below."
@@ -54,45 +54,45 @@ function App() {
           method="POST"
           onSubmit={handleSubmit}
         >
-          <NysTextInputComponent name='fullName' label="Full name" required 
-            onNysBlur={(e) => {
+          <NysTextinput name='fullName' label="Full name" required 
+            onNysBlur={(e: Event) => {
               console.log('nys-blur event received 🔥', e);
             }}
             />
-          <NysTextInputComponent name='email' label="Email" type="email" required/>
-          <NysTextareaComponent name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
+          <NysTextinput name='email' label="Email" type="email" required/>
+          <NysTextarea name='quote' label="Enter your favorite quote:" value="Majorities, of course, start with minorities." required/>
           
           {/* Note: when wrapping components within a component, you will need a closing tag (e.g. select, radiogroup, checkboxgroup, slot wrappings for inner HTML elements) */}
-          <NysSelectComponent name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
+          <NysSelect name="newsletter_topic" label="Select your preferred newsletter topic" id="newsletter-topic" required>
             <option value="government_updates" label="Government Updates" />
             <option value="community_events" label="Community Events" />
             <option value="public_services" label="Public Services & Resources" />
             <option value="transportation_news" label="Transportation & Infrastructure" />
             <option value="environment" label="Environment & Sustainability" />      
-          </NysSelectComponent>
+          </NysSelect>
 
-          <NysFileinputComponent name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
-          <NysTextInputComponent name='test' label="test" type="text" required/>
+          <NysFileinput name="uploadImg" label="Upload a file" description="Accepted file types: .jpg, .png, .pdf" accept="image/png, image/jpeg, .pdf" multiple dropzone required/>
+          <NysTextinput name='test' label="test" type="text" required/>
 
-          <NysRadioGroupComponent
+          <NysRadiogroup
             label="How often do you want updates?"
             description="These updates will be sent directly to your email."
             size="md"
             required
           >
-            <NysRadiobuttonComponent
+            <NysRadiobutton
               name="frequency"
               label="Weekly"
               value="weekly"
             />
-            <NysRadiobuttonComponent
+            <NysRadiobutton
               name="frequency"
               label="Monthly"
               value="monthly"
             />
-          </NysRadioGroupComponent>
+          </NysRadiogroup>
 
-          <NysCheckboxComponent
+          <NysCheckbox
             label="Subscribe to NYS Government Updates"
             description="Get notified via email about important updates and services."
             id="subscribe-checkbox-disabled-checked"
@@ -101,35 +101,35 @@ function App() {
             required
           />
 
-          <NysCheckboxgroupComponent
+          <NysCheckboxgroup
             label="Select your favorite New York landmarks"
             description="Choose from the options below"
             required
           >
-            <NysCheckboxComponent name="landmarks" label="Adirondacks" value="adirondacks" />
-            <NysCheckboxComponent name="landmarks" value="finger-lakes" label="Finger Lakes" />
-            <NysCheckboxComponent name="landmarks" value="catskills" label="Catskills" />
-            <NysCheckboxComponent name="landmarks" value="niagara-falls" label="Niagara Falls"/>
-            <NysCheckboxComponent name="landmarks" value="coney-island" label="Coney Island"/>
-          </NysCheckboxgroupComponent>
+            <NysCheckbox name="landmarks" label="Adirondacks" value="adirondacks" />
+            <NysCheckbox name="landmarks" value="finger-lakes" label="Finger Lakes" />
+            <NysCheckbox name="landmarks" value="catskills" label="Catskills" />
+            <NysCheckbox name="landmarks" value="niagara-falls" label="Niagara Falls"/>
+            <NysCheckbox name="landmarks" value="coney-island" label="Coney Island"/>
+          </NysCheckboxgroup>
 
-          <NysToggleComponent
+          <NysToggle
             label="Dark Mode"
             name="toggle-switch"
             value="access"><p slot="description">Toggle switch is usually NOT recommended for forms (use checkboxes instead).</p>
-          </NysToggleComponent>
+          </NysToggle>
 
-          <NysTooltipComponent text="Hello" position="bottom">
-            <NysButtonComponent
+          <NysTooltip text="Hello" position="bottom">
+            <NysButton
               type="submit"
               fullWidth
               label="Subscribe"
             />
-          </NysTooltipComponent>
+          </NysTooltip>
         </form>
         <br></br>
         {submittedData && (
-          <NysAlertComponent
+          <NysAlert
             type="success"
             heading="Form submitted successfully"
             text={`${submittedData ? "\n\nSubmitted Data:\n" + JSON.stringify(submittedData, null, 2) : ""}`}
@@ -138,14 +138,14 @@ function App() {
         )}
       </main>
 
-      <NysGlobalFooterComponent agencyName="Office of Information Technology Services">
+      <NysGlobalFooter agencyName="Office of Information Technology Services">
         <ul>
           <li><a href="https://its.ny.gov">ITS Home</a></li>
           <li><a href="https://its.ny.gov/about">About ITS</a></li>
         </ul>
-      </NysGlobalFooterComponent>
-      <NysUnavFooterComponent />
-      <NysBacktotopComponent />
+      </NysGlobalFooter>
+      <NysUnavFooter />
+      <NysBacktotop />
     </>
   );
 }

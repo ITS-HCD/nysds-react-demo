@@ -9,15 +9,13 @@ This demo shows how to use [NYS Design System (NYSDS)](https://designsystem.ny.g
 > 
 > If you’ve already cloned this repo, run `npm install` and skip ahead to the next section.
 
-To start a new React project with NYSDS, install the required packages with `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) covers general setup, but React integration requires using @lit/react wrappers. Below is a React + TypeScript setup:
+To start a new React project with NYSDS, install the required packages with `npm`. The [NYSDS reference site](https://designsystem.ny.gov/getting-started/developers/) covers general setup. Below is a React + TypeScript setup:
 
 ```
 npm create vite@latest projectName -- --template react-ts
 cd projectName
 npm install
 npm install @nysds/components @nysds/styles
-npm install @lit/react
-npm install lit
 ```
 
 ## 1. Starting the Dev Server
@@ -28,44 +26,80 @@ npm run dev
 
 ## 2. Wrapping NYSDS components 
 > [!IMPORTANT]
-> As of February 2026, the NYSDS team is **working to make NYSDS installable without Lit or React wrappers**. Until that update is available, please follow the steps below.
-> 
-> This approach is temporary, but for now, copy this file as needed, as it is regularly updated to support the wrapped components required to use NYSDS.
+> ~~NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.~~
+>
+> As of March 2026, the NYSDS team depreciated the old manual wrapping of NYSDS components. NYSDS components are now available directly via `@nysds/components/react` — no manual wrapping or `@lit/react` setup required.
 
-NYSDS components must be wrapped with **wrapped with `@lit/react`** to work correctly in React.
+```tsx
+import { NysButton, NysTextinput } from "@nysds/components/react";
 
-In this project, the components are defined in `utils/nysds-components.ts`and then imported into `App.tsx` and other React pages. If not cloning, copy the code from that file into your own `utils/nysds-components.ts`.
+function MyForm() {
+  return (
+    <>
+      <NysTextinput label="First name" />
+      <NysButton label="Submit" variant="filled" onNysClick={() => console.log("clicked!")} />
+    </>
+  );
+}
+```
 
-## 3. Using NYSDS components 
-Once wrapped, components can be imported and used like standard React components. See `App.tsx` for examples. The multipages branch also uses wrapped components in the src/pages/ directory.
+All props are typed and custom events map to `on<EventName>` React callbacks (e.g. `nys-click` → `onNysClick`).
 
-## 4. NYSDS style imports
-For styling, import the NYSDS CSS files in index.html. Reference them directly from the installed package location (e.g., node_modules folder).
+## 3. NYSDS style imports
+For styling, import the NYSDS CSS in `index.html`. Reference it directly from the installed package: (e.g., node_modules folder).
+
+`<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />`
+
+Or import it in your entry file:
+
+`import "@nysds/styles";`
+
 ___
 
 ## Setting up npm link (For NYSDS developers) 🛠️
 > [!Tip]
 > If you're actively developing the NYSDS Web Components and want to test local changes before publishing, you can use `npm link` to work with your local build inside this React demo project. \
-> You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS components repo and one for the React demo project.
+> You’ll need two terminal or command prompt windows (or tabs) open - one for the NYSDS repo and one for the React demo.
 
 
-1. Link your local NYSDS repo \
-First, navigate to the terminal/cmd prompt tab that has your local NYSDS Web Components repo:
+1. Build and link the NYSDS repo \
+Navigate to your local NYSDS repo and run:
 ```
+npm run build:all
 npm link
 ```
 This creates a global symlink for the NYSDS package.
 
 2. Link it to this React project \
-Next, go to the terminal/cmd prompt tab that has your React demo project and run:
+In this React demo project run:
 ```
 npm link @nysds/components
 ```
 
-3. Restart the development server \
-After linking, restart the Next.js development server:
+3. Restart the dev server:
 ```
 npm run dev
 ```
 
 **Now, any changes to NYSDS Web Components will be immediately reflected in this React app.**
+
+## Deploying 📦
+This project uses [gh-pages](https://github.com/tschaub/gh-pages) to deploy the build output to GitHub Pages.
+
+### Setup
+- Make sure `gh-pages` is installed (already listed in `package.json`).
+
+### Commands
+- `npm run build`  
+  Builds the project into the `dist/` folder using Vite.
+
+- `npm run deploy`  
+  Publishes the contents of `dist/` to the `gh-pages` branch.
+
+### Deployment Process
+1. Run `npm run build` to create the production build.
+2. Run `npm run deploy` to push the build to GitHub Pages.
+3. The site will be available at:  
+   `https://<github-username>.github.io/<repo-name>/`
+
+> Note: The `base` option in `vite.config.js` should match the repository name (e.g., `/nysds-react-demo/`) so assets load correctly.
