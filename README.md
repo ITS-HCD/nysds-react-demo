@@ -45,11 +45,14 @@ function MyForm() {
 
 All props are typed and custom events map to `on<EventName>` React callbacks (e.g. `nys-click` → `onNysClick`).
 
-## 3. Using NYSDS components 
-Once wrapped, components can be imported and used like standard React components. See `App.tsx` for examples. The multipages branch also uses wrapped components in the src/pages/ directory.
+## 3. NYSDS style imports
+For styling, import the NYSDS CSS in `index.html`. Reference it directly from the installed package: (e.g., node_modules folder).
 
-## 4. NYSDS style imports
-For styling, import the NYSDS CSS files in index.html. Reference them directly from the installed package location (e.g., node_modules folder).
+`<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />`
+
+Or import it in your entry file:
+
+`import "@nysds/styles";`
 ___
 
 ## Setting up npm link (For NYSDS developers) 🛠️
